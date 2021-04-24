@@ -1,8 +1,4 @@
-# Project-4
-
-> The Project Planning section **should be completed** for your project pitch with instructors.
->
-> To ensure correct Markdown, copy and paste the raw template code into your project repo README file. Remove ALL template instructions and replace with your project details.
+# Hyke
 
 - [Overview](#overview)
 - [MVP](#mvp)
@@ -23,7 +19,7 @@
 
 ## Overview
 
-_**Project Title** is lorem ipsum dolor sit amet. Phasellus dapibus fermentum risus vitae bibendum. Integer vel ipsum mollis odio sollicitudin ornare eu vel ex. In quis fringilla velit, ac maximus quam. Etiam eget placerat neque. Aenean faucibus sem non nisi lobortis ullamcorper._
+Hyke is an applicaiton that allows users to view a trail within California. The users are allowed to view, and add hikes they have trekked. 
 
 
 <br>
@@ -32,16 +28,16 @@ _**Project Title** is lorem ipsum dolor sit amet. Phasellus dapibus fermentum ri
 
 > The Minimum Viable Product should be a well-planned, easily-communicated product, ensuring that the client's deliverable will be achievable and meet specifications within the time frame estimated.
 
-_The **Project Title** MVP lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dapibus fermentum risus vitae bibendum. Integer vel ipsum mollis odio sollicitudin ornare eu vel ex. In quis fringilla velit, ac maximus quam. Etiam eget placerat neque. Aenean faucibus sem non nisi lobortis ullamcorper._
+_The Hyke MVP lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dapibus fermentum risus vitae bibendum. Integer vel ipsum mollis odio sollicitudin ornare eu vel ex. In quis fringilla velit, ac maximus quam. Etiam eget placerat neque. Aenean faucibus sem non nisi lobortis ullamcorper._
 
 <br>
 
 ### Goals
 
-- _Lorem ipsum, dolor sit amet,_
-- _consectetur adipiscing elit._
-- _Phasellus dapibus fermentum risus vitae bibendum._
-- _Integer vel ipsum mollis odio sollicitudin ornare eu vel ex._
+- Develop Backend, CRUD
+- 3 Data Tables
+- 8 components
+- 2 Responsive Design
 - _etc._
 
 <br>
@@ -94,7 +90,9 @@ _The **Project Title** MVP lorem ipsum dolor sit amet, consectetur adipiscing el
 
 > Use this section to display the structure of how your React components are being rendered. This should show the parent to child relation between you components. In other words, show which components are rendering the other components. Include a link to your component tree
 
-[Component Tree Sample](https://gist.git.generalassemb.ly/davidtwhitlatch/414107e2560ae0bb65e233570f2fe056#file-component-tree-png)
+(https://gist.git.generalassemb.ly/davidtwhitlatch/414107e2560ae0bb65e233570f2fe056#file-component-tree-png)
+
+https://whimsical.com/project-4-KVDgWZvXcmEZxrEfvLzivs
 
 #### Component Architecture
 
@@ -109,8 +107,23 @@ src
       |__ images
       |__ mockups
 |__ components/
+      |__ Navbar.jsx
+      |__ Home.jsx
+      |__ Header.jsx
+      |__ Trails.jsx
+      |__ Footer.jsx
+      |__ SignIn.jsx
+      |__ SignUp.jsx
+      |__ Search.jsx
       |__ Header.jsx
 |__ services/
+      |__ Navbar.jsx
+|__ screens/
+      |__ Home.jsx
+      |__ Sign.jsx
+      |__ Navbar.jsx
+      |__ Navbar.jsx
+|__ containers/
 
 ```
 
