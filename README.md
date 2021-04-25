@@ -44,7 +44,8 @@ Hyke is an application that allows users to view a trail within California. The 
 
 |     Library      | Description                                |
 | :--------------: | :----------------------------------------- |
-|      React       | Frontend development  |
+|      JavaScript React       | Frontend development  |
+|      HTML, CSS3       | Frontend development  |
 |   React Router   | Frontend development |
 |   Authorization  | Login for Backend and Frontend |
 | React Semantic Ui | Implementation of addons. |
