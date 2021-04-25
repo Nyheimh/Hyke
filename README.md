@@ -45,10 +45,10 @@ Hyke is an application that allows users to view a trail within California. The 
 |     Library      | Description                                |
 | :--------------: | :----------------------------------------- |
 |      React       | Frontend development  |
-|   React Router   |  |
-| React SemanticUI |  |
+|   React Router   | Frontend development |
+|   Authorization  | Login for Backend and Frontend |
+| React Semantic Ui | Implementation of addons. |
 |    Ruby On Rails      | Backend Creation and Deployment |
-|  Semantic Ui  | Implementation of addons.  |
 |  Material Ui  | Development of CSS |
 
 
@@ -140,24 +140,30 @@ src
 
 | Component                 | Priority | Estimated Time | Time Invested | Actual Time |
 | ------------------------- | :------: | :------------: | :-----------: | :---------: |
-| Proposal                  |    H     |      hrs      |     hrs      |    hrs     |
-| Clickable icons           |    H     |      hrs      |      hr      |     hr     |
-| Data population pg 1      |    H     |      hrs      |     hrs      |    hrs     |
-| Data population pg 2      |    H     |      hrs      |     hrs      |    hrs     |
-| Data population pg 3      |    H     |      hrs      |     hrs      |    hrs     |
-| Form creation pg 1        |    H     |      hrs      |     hrs      |    hrs     |
-| Form creation pg 2        |    H     |      hrs      |      hr      |     hr     |
-| Form creation pg 3        |    H     |      hrs      |      hr      |     hr     |
-| Data creation/update pg 1 |    H     |      hrs      |     hrs      |   hrs     |
-| Data creation/update pg 2 |    H     |      hrs      |      hr      |     hr     |
-| Data creation/update pg 3 |    H     |      hrs      |      hr      |     hr     |
-| Data deletion pg 1        |    H     |      hrs      |      hr      |     hr     |
-| Data deletion pg 2        |    H     |      hrs      |      hr      |     hr     |
-| Data deletion pg 3        |    H     |      hrs      |      hr      |     hr     |
-| Component CSS pg 1        |    H     |      hrs      |     hrs      |    hrs     |
-| Component CSS pg 2        |    H     |      hrs      |     hrs      |    hrs     |
-| Create CRUD Actions        |    H     |      hrs      |     hrs      |    hrs     |
-| Total                     |    H     |    hrs     |     hrs     |    TBD    |
+| Hyke - Proposal                  |    H     |      2 hrs      |     hrs      |    hrs     |
+| Rails - Controllers           |    H     |      2 hrs      |      hr      |     hr     |
+| Rails - Seed      |    H     |      2 hrs      |     hrs      |    hrs     |
+| Rails - Routes      |    H     |      2 hrs      |     hrs      |    hrs     |
+| Rails - Authorization      |    H     |      3.5 hrs      |     hrs      |    hrs     |
+| Rails - CORs        |    H     |      2 hrs      |     hrs      |    hrs     |
+| Rails - CRUD        |    H     |      2 hrs      |      hr      |     hr     |
+| Deployment of Backend        |    H     |      2 hrs      |      hr      |     hr     |
+| React - Routes |    H     |      3 hrs      |     hrs      |   hrs     |
+| Frontend - Navbar |    H     |      3 hrs      |      hr      |     hr     |
+| Frontend - Homepage |    H     |      3 hrs      |      hr      |     hr     |
+| Frontend - Header |    H     |      2 hrs      |      hr      |     hr     |
+| Frontend - Search |    H     |      3 hrs      |      hr      |     hr     |
+| Frontend - Hyke |    H     |       3 hrs      |      hr      |     hr     |
+| Frontend - Sign Up |    H     |      3 hrs      |      hr      |     hr     |
+| Frontend - Sign In |    H     |      3 hrs      |      hr      |     hr     |
+| Frontend - Footer |    H     |      1.5 hrs      |      hr      |     hr     |
+| Frontend - Add Hyke |    H     |      2 hrs      |      hr      |     hr     |
+| Frontend - Hyke Details |    H     |      2 hrs      |      hr      |     hr     |
+| Frontend - Hyke Review |    H     |      2 hrs      |      hr      |     hr     |
+| Frontend - Sign In |    H     |      2 hrs      |      hr      |     hr     |
+| Frontend - Deployment |    H     |     3 hrs      |      hr      |     hr     |
+| Frontend - CSS |    H     |      4 hrs      |      hr      |     hr     |
+| Total                     |    H     |    54 hrs     |     hrs     |    TBD    |
 
 <br>
 
@@ -166,7 +172,9 @@ src
 #### ERD Model
 
 https://app.diagrams.net/#LHyke
-file:///Users/nyheimhunter/Downloads/Hyke%20(2).pdf
+
+![image](https://user-images.githubusercontent.com/78383071/116000176-f2ff4500-a5a3-11eb-88cc-79d9d8f2fcd6.png)
+
 <br>
 
 ***
