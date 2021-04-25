@@ -19,16 +19,12 @@
 
 ## Overview
 
-Hyke is an applicaiton that allows users to view a trail within California. The users are allowed to view, and add hikes they have trekked. 
+Hyke is an application that allows users to view a trail within California. The users are allowed to view, and add hikes they have trekked. 
 
 
 <br>
 
 ## MVP
-
-> The Minimum Viable Product should be a well-planned, easily-communicated product, ensuring that the client's deliverable will be achievable and meet specifications within the time frame estimated.
-
-_The Hyke MVP lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dapibus fermentum risus vitae bibendum. Integer vel ipsum mollis odio sollicitudin ornare eu vel ex. In quis fringilla velit, ac maximus quam. Etiam eget placerat neque. Aenean faucibus sem non nisi lobortis ullamcorper._
 
 <br>
 
@@ -48,11 +44,13 @@ _The Hyke MVP lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
 
 |     Library      | Description                                |
 | :--------------: | :----------------------------------------- |
-|      React       |  |
+|      React       | Frontend development  |
 |   React Router   |  |
 | React SemanticUI |  |
-|     Express      |  |
-|  Express Router  |  |
+|    Ruby On Rails      | Backend Creation and Deployment |
+|  Semantic Ui  | Implementation of addons.  |
+|  Material Ui  | Development of CSS |
+
 
 <br>
 
@@ -60,7 +58,8 @@ _The Hyke MVP lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
 
 #### Wireframes
 
-> Use the Wireframes section to display desktop, tablet and mobile views. No hand-drawn wireframes. Use a tool like wireframe.cc, Whimsical or AdobeXD
+https://www.figma.com/file/gf8aiuI4uBa7dxywLE1IaJ/Hyke?node-id=4%3A85
+
 
 ![Dummy Link](url)
 
@@ -88,15 +87,11 @@ _The Hyke MVP lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
 
 #### Component Tree
 
-> Use this section to display the structure of how your React components are being rendered. This should show the parent to child relation between you components. In other words, show which components are rendering the other components. Include a link to your component tree
-
 (https://gist.git.generalassemb.ly/davidtwhitlatch/414107e2560ae0bb65e233570f2fe056#file-component-tree-png)
 
 https://whimsical.com/project-4-KVDgWZvXcmEZxrEfvLzivs
 
 #### Component Architecture
-
-> Use this section to define your React components and the data architecture of your app. This should be a reflection of how you expect your directory/file tree to look like. 
 
 ``` structure
 
@@ -116,14 +111,25 @@ src
       |__ SignUp.jsx
       |__ Search.jsx
       |__ Header.jsx
+      |__ About.jsx
 |__ services/
-      |__ Navbar.jsx
+      |__ api-helper.js
+      |__ auth.js
+      |__ hyke.js
 |__ screens/
       |__ Home.jsx
-      |__ Sign.jsx
-      |__ Navbar.jsx
-      |__ Navbar.jsx
+      |__ Start Hyking(Regsiter).jsx
+      |__ Sign In.jsx
+      |__ Hykes.jsx
+      |__ Hyke Details.jsx
+      |__ Add Hyke.jsx
+      |__ Hyke Details Edit.jsx
+      |__ Hyke Review (Add).jsx
+      |__ About.jsx
 |__ containers/
+      |__ User.jsx
+      |__ Trails.jsx
+      |__ Reviews.jsx
 
 ```
 
@@ -134,26 +140,24 @@ src
 
 | Component                 | Priority | Estimated Time | Time Invested | Actual Time |
 | ------------------------- | :------: | :------------: | :-----------: | :---------: |
-| Proposal                  |    H     |      2hrs      |     2hrs      |    2hrs     |
-| Clickable icons           |    H     |      1hrs      |      1hr      |     1hr     |
-| Data population pg 1      |    H     |      3hrs      |     3hrs      |    3hrs     |
-| Data population pg 2      |    H     |      3hrs      |     2hrs      |    2hrs     |
-| Data population pg 3      |    H     |      3hrs      |     2hrs      |    2hrs     |
-| Form creation pg 1        |    H     |      2hrs      |     2hrs      |    2hrs     |
-| Form creation pg 2        |    H     |      2hrs      |     1 hr      |    1 hr     |
-| Form creation pg 3        |    H     |      2hrs      |     1 hr      |     1hr     |
-| Data creation/update pg 1 |    H     |      3hrs      |     3hrs      |    3hrs     |
-| Data creation/update pg 2 |    H     |      3hrs      |      1hr      |     1hr     |
-| Data creation/update pg 3 |    H     |      3hrs      |      1hr      |     1hr     |
-| Data deletion pg 1        |    H     |      2hrs      |      1hr      |     1hr     |
-| Data deletion pg 2        |    H     |      2hrs      |      1hr      |     1hr     |
-| Data deletion pg 3        |    H     |      2hrs      |      1hr      |     1hr     |
-| Component CSS pg 1        |    H     |      3hrs      |     4hrs      |    4hrs     |
-| Component CSS pg 2        |    H     |      3hrs      |     4hrs      |    4hrs     |
-| Create CRUD Actions        |    H     |      3hrs      |     4hrs      |    4hrs     |
-| Total                     |    H     |    42.5hrs     |     35hrs     |    TBD    |
-
-> _Why is this necessary? Time frames are key to the development cycle. You have limited time to code your app, and your estimates can then be used to evaluate possibilities of your MVP and post-MVP based on time needed. It's best you assume an additional hour for each component, as well as a few hours added to the total time, to play it safe._
+| Proposal                  |    H     |      hrs      |     hrs      |    hrs     |
+| Clickable icons           |    H     |      hrs      |      hr      |     hr     |
+| Data population pg 1      |    H     |      hrs      |     hrs      |    hrs     |
+| Data population pg 2      |    H     |      hrs      |     hrs      |    hrs     |
+| Data population pg 3      |    H     |      hrs      |     hrs      |    hrs     |
+| Form creation pg 1        |    H     |      hrs      |     hrs      |    hrs     |
+| Form creation pg 2        |    H     |      hrs      |      hr      |     hr     |
+| Form creation pg 3        |    H     |      hrs      |      hr      |     hr     |
+| Data creation/update pg 1 |    H     |      hrs      |     hrs      |   hrs     |
+| Data creation/update pg 2 |    H     |      hrs      |      hr      |     hr     |
+| Data creation/update pg 3 |    H     |      hrs      |      hr      |     hr     |
+| Data deletion pg 1        |    H     |      hrs      |      hr      |     hr     |
+| Data deletion pg 2        |    H     |      hrs      |      hr      |     hr     |
+| Data deletion pg 3        |    H     |      hrs      |      hr      |     hr     |
+| Component CSS pg 1        |    H     |      hrs      |     hrs      |    hrs     |
+| Component CSS pg 2        |    H     |      hrs      |     hrs      |    hrs     |
+| Create CRUD Actions        |    H     |      hrs      |     hrs      |    hrs     |
+| Total                     |    H     |    hrs     |     hrs     |    TBD    |
 
 <br>
 
