@@ -19,7 +19,7 @@
 
 ## Overview
 
-Hyke is an application that allows users to view a trail within California. The users are allowed to view, and add hikes they have trekked. 
+Hyke is an application that allows users to view a trail. The users are allowed to view, and add hikes they have trekked. 
 
 
 <br>
@@ -34,7 +34,9 @@ Hyke is an application that allows users to view a trail within California. The 
 - 3 Data Tables
 - 8 components
 - 2 Responsive Design
-- _etc._
+- Reviews
+
+
 
 <br>
 
@@ -44,7 +46,7 @@ Hyke is an application that allows users to view a trail within California. The 
 
 |     Library      | Description                                |
 | :--------------: | :----------------------------------------- |
-|      JavaScript React       | Frontend development  |
+|      ReactJs       | Frontend development  |
 |      HTML, CSS3       | Frontend development  |
 |   React Router   | Frontend development |
 |   Authorization  | Login for Backend and Frontend |
@@ -64,8 +66,6 @@ https://www.figma.com/file/gf8aiuI4uBa7dxywLE1IaJ/Hyke?node-id=4%3A85
 
 #### Component Tree
 
-(https://gist.git.generalassemb.ly/davidtwhitlatch/414107e2560ae0bb65e233570f2fe056#file-component-tree-png)
-
 https://whimsical.com/project-4-KVDgWZvXcmEZxrEfvLzivs
 
 #### Component Architecture
@@ -76,8 +76,7 @@ src
 |__ assets/
       |__ fonts
       |__ graphics
-      |__ images
-      |__ mockups
+      |__ images 
 |__ components/
       |__ Navbar.jsx
       |__ Home.jsx
@@ -95,24 +94,22 @@ src
       |__ hyke.js
 |__ screens/
       |__ Home.jsx
-      |__ Start Hyking(Regsiter).jsx
+      |__ Start Hyking(Register).jsx
       |__ Sign In.jsx
       |__ Hykes.jsx
       |__ Hyke Details.jsx
-      |__ Add Hyke.jsx
-      |__ Hyke Details Edit.jsx
+      |__ Add/Edit Hyke.jsx
       |__ Hyke Review (Add).jsx
       |__ About.jsx
 |__ containers/
       |__ User.jsx
       |__ Trails.jsx
-      |__ Reviews.jsx
+      
 
 ```
 
 #### Time Estimates
 
-> Use this section to estimate the time necessary to build out each of the components you've described above.
 > 
 
 | Component                 | Priority | Estimated Time | Time Invested | Actual Time |
@@ -158,7 +155,7 @@ https://app.diagrams.net/#LHyke
 
 ## Post-MVP
 
-> Use this section to document ideas you've had that would be fun (or necessary) for your Post-MVP. This will be helpful when you return to your project after graduation!
+ - SubComments
 
 ***
 
