@@ -42,8 +42,6 @@ Hyke is an application that allows users to view a trail. The users are allowed 
 
 ### Libraries and Dependencies
 
-> Use this section to list all supporting libraries and dependencies, and their role in the project. Below is an example - this needs to be replaced!
-
 |     Library      | Description                                |
 | :--------------: | :----------------------------------------- |
 |      ReactJs       | Frontend development  |
@@ -155,7 +153,8 @@ https://app.diagrams.net/#LHyke
 
 ## Post-MVP
 
- - SubComments
+ - Sub-comments
+ - Add a Module
 
 ***
 
