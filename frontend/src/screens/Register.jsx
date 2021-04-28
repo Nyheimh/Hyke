@@ -1,26 +1,31 @@
 import { useState } from "react";
 import {Link} from "react-router-dom"
 
-export default function Register() {
+export default function Register(props) {
   const [formData, setFormData] = useState({
     name: "",
     username: "",
     email: "",
     password: "",
-    confirmPassword: "",
+    confirm: "",
   });
 
-  const { name, username, email, password, confirmPassword } = formData;
+  const { name, username, email, password, confirm } = formData;
+  const { handleLogin } = props;
   
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData(prevState => ({
+      ...prevState,
       [name]: value
     }))
   }
 
   return (
-    <form>
+    <form onSubmit={(e) => {
+      e.preventDefault();
+      handleLogin(formData)
+    }}>
       <h3> Start Hyking </h3>
       <label> Name:
         <input type="text" name="name" value={name} onChange={handleChange} />
@@ -39,8 +44,10 @@ export default function Register() {
       </label>
 
       <label> Confirm Password:
-        <input type="password" name="confirm password" value={confirmPassword} onChange={handleChange} />
+        <input type="password" name="confirm password" value={confirm} onChange={handleChange} />
+        
       </label>
+      <Link>Register</Link>
       <button>Submit</button>
     </form>
   );

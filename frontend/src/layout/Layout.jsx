@@ -6,7 +6,7 @@ export default function Layout(props) {
     <div>
 
     <header>
-      <Link to='/login'>Login/Register</Link>
+      <Link to='/register'>Login/Register</Link>
         <h1>Hyke</h1>
         <hr/>
       {/* <Search /> */}
