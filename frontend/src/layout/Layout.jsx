@@ -1,11 +1,17 @@
 // import Search from '../components/Search'
+import { Link } from "react-router-dom";
 
-
-export default function Layout() {
+export default function Layout(props) {
   return (
     <div>
-      <h1>Layout</h1>
+
+    <header>
+      <Link to='/login'>Login/Register</Link>
+        <h1>Hyke</h1>
+        <hr/>
       {/* <Search /> */}
+    </header>
+      {props.children}
     </div>
-  )
+  );
 }
