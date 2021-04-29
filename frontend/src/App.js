@@ -1,8 +1,10 @@
 import './App.css';
 import {Switch, Route, useHistory} from 'react-router-dom'
 import Layout from './layout/Layout'
-import Register from './screens/Register'
-import Login from './screens/Login'
+import Register from './screens/Register/Register'
+import Login from './screens/Login/Login'
+import MainContainer from './container/MainContainer'
+
 import { useState, useEffect } from 'react';
 import { loginUser, registerUser, removeToken, verifyUser } from './services/auth'
 
@@ -52,6 +54,10 @@ function App() {
           <Route path='/register'>
             <Register
               handleRegister={handleRegister}/>
+          </Route>
+          <Route path='/'>
+            <MainContainer />
+
           </Route>
         </Switch>
       {/* <Layout /> */}

@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react";
 import { Switch, Route, useHistory } from "react-router-dom";
-import Flavors from "../screens/Flavors";
-import TrailCreate from "../screens/TrailCreate";
-import TrailDetail from "../screens/TrailDetail";
-import TrailEdit from "../screens/TrailEdit";
-import Trails from "../screens/Trails";
-import { getAllFlavors } from "../services/flavors";
+// import Reviews from "../screens/Reviews";
+import TrailCreate from "../screens/TrailCreate/TrailCreate";
+import TrailDetail from "../screens/TrailDetail/TrailDetail";
+import TrailEdit from "../screens/TrailEdit/TrailEdit";
+import Trails from "../screens/Trails/Trails";
+import { getAllReviews } from "../services/reviews";
 import {
   deleteTrail,
   getAllTrails,
@@ -15,16 +15,16 @@ import {
 
 export default function MainContainer(props) {
   const [trails, setTrails] = useState([]);
-  const [flavors, setFlavors] = useState([]);
+  const [reviews, setReviews] = useState([]);
   const history = useHistory();
   const { currentUser } = props;
 
   useEffect(() => {
-    const fetchFlavors = async () => {
-      const flavorData = await getAllFlavors();
-      setFlavors(flavorData);
+    const fetchReviews = async () => {
+      const reviewData = await getAllReviews();
+      setReviews(reviewData);
     };
-    fetchFlavors();
+    fetchReviews();
   }, []);
 
   useEffect(() => {
@@ -58,8 +58,8 @@ export default function MainContainer(props) {
 
   return (
     <Switch>
-      <Route path="/flavors">
-        <Flavors flavors={flavors} />
+      <Route path="/reviews">
+        <reviews reviews={reviews} />
       </Route>
       <Route path="/trails/:id/edit">
         <TrailEdit trails={trails} handleEdit={handleEdit} />
@@ -68,7 +68,7 @@ export default function MainContainer(props) {
         <TrailCreate handleCreate={handleCreate} />
       </Route>
       <Route path="/trails/:id">
-        <TrailDetail flavors={flavors} />
+        <TrailDetail reviews={reviews} />
       </Route>
       <Route path="/trails">
         <Trails
