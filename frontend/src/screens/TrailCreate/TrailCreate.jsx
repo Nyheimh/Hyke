@@ -40,51 +40,38 @@ const TrailCreate = (props) => {
         <Layout user={props.user}>
           <div class="field error">
 
-          </div>
-          <Form className="addSeries-form-container" >
           {/* onSubmit={handleSubmit} */}
-            <h2 className="addSeries-form-title">Add Trail</h2>
-            <Form.Group>
+            <h2>Add Trail</h2>
               <label>Trail Name:</label>
               <input
-                placeholder
-                type="text"
                 placeholder="Trail Name"
-                name="name"
+                type="text"
+                // name="name"
                 value={trail.name}
                 onChange={handleChange}
                 // id="input-title"
-              />
-            </Form.Group>
-            <Form.Group controlId="formBasicEmail">
-              <Form.Label className="addSeries-form-label">Location</Form.Label>
-              <Form.Control
-                type="text"
+                />
+                </div>
+                <label>Location</label>
+                <input
                 placeholder="Location of Trail"
-                name="trail"
+                type="text"
+                // name="trail"
                 value={trail.location}
                 onChange={handleChange}
                 // id="input-duration"
               />
-            </Form.Group>
-            <Form.Group controlId="formBasicEmail">
-              <Form.Label className="addSeries-form-label">Duration</Form.Label>
-              <Form.Control
+              <label>Duration</label>
+              <input
                 type="text"
                 placeholder="Duration to Complete"
-                name="imgURL"
+                // name="imgURL"
                 value={trail.duration}
-                required
-                autoFocus
                 onChange={handleChange}
                 // id="input-image"
               />
-            </Form.Group>
-            <Form.Group controlId="formBasicEmail">
-              <Form.Label className="addSeries-form-label">
-                Trail Details
-              </Form.Label>
-              <textarea
+              <label> Trail Details</label>
+              <input
                 type="text"
                 placeholder="Details (2-4 sentences)"
                 name="details"
@@ -92,11 +79,9 @@ const TrailCreate = (props) => {
                 onChange={handleChange}
                 // id="input-plot"
               />
-            </Form.Group>
             <Button type="submit" id="add-button">
               Add
             </Button>
-          </Form>
         </Layout>
       </div>
     </div>
