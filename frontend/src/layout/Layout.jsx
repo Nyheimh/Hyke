@@ -2,7 +2,7 @@
 import { Link } from "react-router-dom";
 import Navbar from "../components/Navbar/Navbar";
 import Home from "../screens/Home/Home"
-import Trails from "../screens/Trails/Trails"
+// import Trails from "../screens/Trails/Trails"
 
 
 export default function Layout(props) {
@@ -11,7 +11,6 @@ export default function Layout(props) {
     <div>
       <header>
         <Navbar />
-        <h1>Hyke</h1>
         {currentUser ? (
           <>
             <p>{currentUser.username}</p>
@@ -23,15 +22,15 @@ export default function Layout(props) {
         <hr />
         {currentUser && (
           <>
-            <Link>Trails</Link>
-            <Link> Reviews</Link>
+            {/* <Link>Trails</Link>
+            <Link> Reviews</Link> */}
           </>
         )}
         {/* <Search /> */}
       </header>
       {props.children}
-
-      <Trails />
+          <Home />
+      {/* <Trails /> */}
     </div>
   );
 }

@@ -1,56 +1,33 @@
 import { useState } from "react";
 import "./Search.css";
-import SearchIcon from "@material-ui/icons/Search";
-import MicIcon from "@material-ui/icons/Mic";
-import { Button } from "@material-ui/core";
-import { useHistory } from "react-router-dom";
-import { useStateValue } from "../../StateProvider"
-import { actionTypes } from "../../reducer"
+// import { useHistory } from "react-router-dom";
 
-function Search({ hideButtons = false }) {
-  const [{ }, dispatch] = useStateValue();
 
-  const [input, setInput] = useState("");
-  const history = useHistory();
+const Search = () => {
+  // const [{ }, dispatch] = useStateValue();
 
-  const search = (e) => {
-    e.preventDefault();
+  const [search, setSearch] = useState('');
+  // const history = useHistory();
 
-    console.log("you hit search", input);
+    console.log("you hit search", search);
     //this dispatchs an action
-    dispatch({
-      type: actionTypes.SET_SEARCH_TERM,
-      term: input
-      })
+    // dispatch({
+      // type: actionTypes.SET_SEARCH_TERM,
+      // term: input
+      // })
     //
-    history.push("/search");
-  };
+    // history.push("/search");
 
   return (
     <form className="search">
       <div className="search__input">
-        <SearchIcon className="search__inputIcon" />
-        <input value={input} onChange={(e) => setInput(e.target.value)} />
-        <MicIcon />
+        <input value={search} type="text" placeholder="Search" onChange={(e) => setSearch(e.target.value)} />
       </div>
-{/* if hide button prop is passed use classes buttonHidden (display none)*/}
-      {!hideButtons ? (
       <div className="search__buttons">
-        <Button type="submit" onClick={search} variant="outlined">
-          Search
-        </Button>
-        <Button variant="outlined">Random</Button>
+        <button type="submit" onClick={search} variant="outlined"> Search </button>
+        <button variant="outlined">Random Hyke</button>
+
       </div>
-        
-      ) : (
-          // used a ternary to hide buttons initiated by buttonHidden
-        <div className="search__buttons">
-        <Button className="search__buttonsHidden" type="submit" onClick={search} variant="outlined">
-          Search
-        </Button>
-        <Button className="search__buttonsHidden" variant="outlined">Random</Button>
-      </div>
-      )}
     </form>
   );
 }

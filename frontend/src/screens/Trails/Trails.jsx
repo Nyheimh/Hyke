@@ -15,10 +15,11 @@ const useStyles = makeStyles((theme) => ({
     paddingBottom: theme.spacing(3),
   },
   card: {
-    maxWidth: "100%",
+    // maxWidth: "100%",
   },
   media: {
-    height: 240,
+    height: 300,
+    // width: 200,
   },
   cardActions: {
     display: "flex",
@@ -36,13 +37,47 @@ export default function Trails() {
           <Card className={classes.card}>
             <CardActionArea>
               <CardMedia
+                component={Link} to="/trails/:id"
                 className={classes.media}
-                image="https://images.unsplash.com/photo-1487611459768-bd414656ea10?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1650&q=80"
+                image="https://images.unsplash.com/photo-1465188466731-618dfc07a57d?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8aGlrZXN8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60"
                 title="Mount Tamalpais"
               />
             </CardActionArea>
           </Card>
         </Grid>
+
+
+        {/* ===========================================================================================================================         */}
+        
+        <Grid item xs={12} sm={6} md={4}>
+          <Card className={classes.card}>
+            <CardActionArea>
+              <CardMedia
+                component={Link} to="/trails/:id"
+                className={classes.media}
+                image="https://images.unsplash.com/photo-1524904382563-42060a3c6bd3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=934&q=80"
+                title="Mount Tamalpais"
+              />
+            </CardActionArea>
+          </Card>
+        </Grid>
+
+        {/* =========================================================================================================================== */}
+
+        <Grid item xs={12} sm={6} md={4}>
+          <Card className={classes.card}>
+            <CardActionArea>
+              <CardMedia
+                className={classes.media}
+                image="https://images.unsplash.com/photo-1571162362234-0a92e908cca9?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80"
+                title="South Lake Tahoe"
+              />
+            </CardActionArea>
+          </Card>
+        </Grid>
+        
+        {/* =========================================================================================================================== */}
+
       </Grid>
     </Container>
   );
