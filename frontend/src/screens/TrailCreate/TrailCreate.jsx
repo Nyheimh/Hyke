@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Redirect } from "react-router-dom";
 // import { createShow } from "../../services/shows";
-import Layout from "../../components/Layout/Layout";
+import Layout from "../../layout/Layout"
 // import "./CreateShow.css";
 
 const TrailCreate = (props) => {
@@ -35,10 +35,10 @@ const TrailCreate = (props) => {
     return <Redirect to={`/trails`} />;
   }
   return (
-    <div class="ui form">
-      <div class="two fields">
+    <div class="ui-form">
+      <div class="two-fields">
         <Layout user={props.user}>
-          <div class="field error">
+          <div class="field-error">
 
           {/* onSubmit={handleSubmit} */}
             <h2>Add Trail</h2>
@@ -79,13 +79,13 @@ const TrailCreate = (props) => {
                 onChange={handleChange}
                 // id="input-plot"
               />
-            <Button type="submit" id="add-button">
+            <button type="submit" id="add-button">
               Add
-            </Button>
+            </button>
         </Layout>
       </div>
     </div>
   );
 };
 
-export default CreateShow;
+export default TrailCreate;
