@@ -4,7 +4,7 @@ import Layout from './layout/Layout'
 import Register from './screens/Register'
 import Login from './screens/Login'
 import { useState, useEffect } from 'react';
-import { loginUser, registerUser, verifyUser } from './services/auth'
+import { loginUser, registerUser, removeToken, verifyUser } from './services/auth'
 
 function App() {
   const [currentUser, setCurrentUser] = useState(null) //null for objects empty string for arrays
@@ -30,9 +30,18 @@ function App() {
     history.push('/')
   }
 
+  const handleLogout = () => {
+    setCurrentUser(null)
+    localStorage.removeItem('authToken');
+    removeToken();
+  }
+
   return (
     <div className="App">
-      <Layout>
+      <Layout
+        currentUser={currentUser}
+        handleLogout={handleLogout}
+      >
         <Switch>
           <Route path='/login'>
             <Login
