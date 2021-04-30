@@ -46,7 +46,7 @@ export default function TrailCreate(props) {
               <input
                 placeholder="Trail Name"
                 type="text"
-                // name="name"
+                name="name"
                 value={name}
                 onChange={handleChange}
                 // id="input-title"
@@ -57,7 +57,7 @@ export default function TrailCreate(props) {
             <input
               placeholder="Location of Trail"
               type="text"
-              // name="trail"
+              name="location"
               value={location}
               onChange={handleChange}
               // id="input-duration"
@@ -67,7 +67,7 @@ export default function TrailCreate(props) {
             <input
               type="text"
               placeholder="Duration to Complete"
-              // name="imgURL"
+              name="duration"
               value={duration}
               onChange={handleChange}
               // id="input-image"

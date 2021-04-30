@@ -24,7 +24,9 @@ export default function TrailDetail(props) {
           <div className="card">
             <h3>{trail.name}</h3>
             <img src={trail.img_url} alt={trail.name} />
-            <p>{trail.title}</p>
+            <p>{trail.location}</p>
+            <p>{trail.duration}</p>
+            <p>{trail.details}</p>
             <Link to={`/trails/${trail.id}/edit`}>
               <button>Update</button>
           </Link>

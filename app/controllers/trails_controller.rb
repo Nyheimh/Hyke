@@ -19,7 +19,7 @@ class TrailsController < ApplicationController
     @trail = Trail.new(trail_params)
     @trail.user = @current_user
     if @trail.save
-      render json: @trail, status: :created, location: @trail
+      render json: @trail, include: :reviews, status: :created, location: @trail
     else
       render json: @trail.errors, status: :unprocessable_entity
     end
@@ -28,7 +28,7 @@ class TrailsController < ApplicationController
   # PATCH/PUT /trails/1
   def update
     if @trail.update(trail_params)
-      render json: @trail
+      render json: @trail, include: :reviews
     else
       render json: @trail.errors, status: :unprocessable_entity
     end
