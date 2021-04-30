@@ -23,26 +23,20 @@ export default function TrailCreate(props) {
     }));
   };
 
-  // const handleSubmit = async (event) => {
-  //   event.preventDefault();
-  //   const created = await postTrail(trail);
-  //   setCreated({ created });
-  // };
-
-  // if (isCreated) {
-  //   return <Redirect to={`/trails`} />;
-  // }
   return (
-    <Layout>
-      <form onSubmit={(e) => {
-        e.preventDefault()
-        handleCreate(formData)
-      }}>
+    <div>
+      <form
+        onSubmit={(e) => {
+          e.preventDefault();
+          handleCreate(formData);
+        }}
+      >
         <div className="form">
-            <div className="field-error">
-              {/* onSubmit={handleSubmit} */}
-              <h2 className="title">Add Trail</h2>
-              <label>Trail Name:
+          <div className="field">
+            {/* onSubmit={handleSubmit} */}
+            <h2 className="title">Add Trail</h2>
+            <label>
+              Trail Name:
               <input
                 placeholder="Trail Name"
                 type="text"
@@ -50,10 +44,10 @@ export default function TrailCreate(props) {
                 value={name}
                 onChange={handleChange}
                 // id="input-title"
-                />
-                </label>
-            </div>
-            <label>Location
+              />
+            </label>
+          <label>
+            Location
             <input
               placeholder="Location of Trail"
               type="text"
@@ -62,8 +56,9 @@ export default function TrailCreate(props) {
               onChange={handleChange}
               // id="input-duration"
               />
-              </label>
-            <label>Duration
+          </label>
+          <label>
+            Duration
             <input
               type="text"
               placeholder="Duration to Complete"
@@ -72,8 +67,10 @@ export default function TrailCreate(props) {
               onChange={handleChange}
               // id="input-image"
               />
-              </label>
-            <label> Trail Details
+          </label>
+          <label>
+            {" "}
+            Trail Details
             <input
               type="text"
               placeholder="Details (2-4 sentences)"
@@ -82,12 +79,13 @@ export default function TrailCreate(props) {
               onChange={handleChange}
               // id="input-plot"
               />
-              </label>
-            <button type="submit" id="add-button">
-              Add
-            </button>
-          </div>
+          </label>
+          <button type="submit" id="add-button">
+            Add
+          </button>
+        </div>
+              </div>
       </form>
-    </Layout>
+    </div>
   );
 }
