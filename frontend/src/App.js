@@ -4,7 +4,6 @@ import Layout from './layout/Layout'
 import Register from './screens/Register/Register'
 import Login from './screens/Login/Login'
 import MainContainer from './container/MainContainer'
-
 import { useState, useEffect } from 'react';
 import { loginUser, registerUser, removeToken, verifyUser } from './services/auth'
 
