@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import Layout from "../../layout/Layout"
 // import { getShow } from "../../services/shows";
 // import { addToWatchlist } from "../../services/users";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 // import { Button } from "react-bootstrap";
 import "./TrailDetail.css";
 
@@ -46,7 +46,10 @@ import "./TrailDetail.css";
                   <h3>{trail.name}</h3>
                   <img src={trail.img_url} alt={trail.name} />
                   <p>{trail.title}</p>
-                  <Link to={`/trails/${trail.id}/edit`}
+                  <Link to={`/trails/${trail.id}/edit`}>
+                    <button>Update</button>
+                  </Link>
+                    <button onClick={() => removeTrail(trail.id)}>Release</button>
                 </div>
               }
         </div>
