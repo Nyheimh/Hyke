@@ -1,3 +1,4 @@
+import React from 'react'
 import { Link } from "react-router-dom";
 import { makeStyles } from "@material-ui/core/styles";
 import Container from "@material-ui/core/Container";
@@ -29,28 +30,36 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function Trails() {
+export default function Trails(props) {
   const classes = useStyles();
+  const { trails } = props;
+
   return (
     <Container maxWidth="lg" className={classes.blogsContainer}>
+      <h3>Trails</h3>
       <Grid container spacing={3}>
-        <Grid item xs={12} sm={6} md={4}>
+        {trails.map((trail) => (
+          <React.Fragment key={trail.id}>
+
+          <Grid item xs={12} sm={6} md={4}>
           <Card className={classes.card}>
             <CardActionArea>
               <CardMedia id="box"
                 component={Link} to="/trails/:id"
                 className={classes.media}
                 image="https://images.unsplash.com/photo-1465188466731-618dfc07a57d?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8aGlrZXN8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60"
-                title="Mount Tamalpais"
-              />
+                title={trail.name}
+                />
             </CardActionArea>
           </Card>
         </Grid>
+                </React.Fragment>
+                ))}
 
 
         {/* ===========================================================================================================================         */}
         
-        <Grid item xs={12} sm={6} md={4}>
+        {/* <Grid item xs={12} sm={6} md={4}>
           <Card className={classes.card}>
             <CardActionArea>
               <CardMedia id="box"
@@ -61,11 +70,11 @@ export default function Trails() {
               />
             </CardActionArea>
           </Card>
-        </Grid>
+        </Grid> */}
 
         {/* =========================================================================================================================== */}
 
-        <Grid item xs={12} sm={6} md={4}>
+        {/* <Grid item xs={12} sm={6} md={4}>
           <Card className={classes.card}>
             <CardActionArea>
               <CardMedia id="box"
@@ -75,7 +84,7 @@ export default function Trails() {
               />
             </CardActionArea>
           </Card>
-        </Grid>
+        </Grid> */}
         
         {/* =========================================================================================================================== */}
 

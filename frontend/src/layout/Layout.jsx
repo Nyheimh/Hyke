@@ -23,8 +23,8 @@ export default function Layout(props) {
         <hr />
         {currentUser && (
           <>
-            {/* <Link>Trails</Link>
-            <Link> Reviews</Link> */}
+            {/* <Link to ='/trails'>'Trails</Link>
+            <Link to = '/reviews' > Reviews</Link> */}
           </>
         )}
         {/* <Search /> */}

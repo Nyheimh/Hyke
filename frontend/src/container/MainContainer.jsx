@@ -12,6 +12,7 @@ import {
   postTrail,
   putTrail,
 } from "../services/trails";
+import Reviews from '../screens/Review/Review'
 
 export default function MainContainer(props) {
   const [trails, setTrails] = useState([]);
@@ -58,8 +59,8 @@ export default function MainContainer(props) {
 
   return (
     <Switch>
-      <Route exact path="/reviews">
-        <reviews reviews={reviews} />
+      <Route path="/reviews">
+        <Reviews reviews={reviews} />
       </Route>
       <Route path="/trails/:id/edit">
         <TrailEdit trails={trails} handleEdit={handleEdit} />

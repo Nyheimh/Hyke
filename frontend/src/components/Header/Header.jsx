@@ -49,20 +49,21 @@ export default function Header() {
     <nav>
       <div className="nav">
         <div className="links">
-          <div className="authorized">
-            {user && (
-              <div className="userWelcome">
-                <div></div>
+          {/* <div className="authorized"> */}
+            {/* {user && ( */}
+              {/* <div className="userWelcome"> */}
+                {/* <div></div> */}
                 {/* Welcome, {username} */}
-              </div>
-            )}
-            <div className="navOptions">
-              {alwaysOptions}
-              {user ? authenticatedOptions : unauthenticatedOptions}
-            </div>
+              {/* </div> */}
+            {/* )} */}
+            {/* <div className="navOptions"> */}
+              {/* {alwaysOptions} */}
+              {/* {user ? authenticatedOptions : unauthenticatedOptions} */}
+            {/* </div> */}
           </div>
         </div>
-      </div>
+      {/* </div> */}
     </nav>
   );
 }
+// 
