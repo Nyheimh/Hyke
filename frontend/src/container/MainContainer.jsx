@@ -58,7 +58,7 @@ export default function MainContainer(props) {
 
   return (
     <Switch>
-      <Route path="/reviews">
+      <Route exact path="/reviews">
         <reviews reviews={reviews} />
       </Route>
       <Route path="/trails/:id/edit">
@@ -67,10 +67,10 @@ export default function MainContainer(props) {
       <Route path="/trails/new">
         <TrailCreate handleCreate={handleCreate} />
       </Route>
-      <Route path="/trails/:id">
+      <Route exact path="/trails/:id">
         <TrailDetail reviews={reviews} />
       </Route>
-      <Route path="/trails">
+      <Route exact path="/trails">
         <Trails
           trails={trails}
           currentUser={currentUser}

@@ -44,13 +44,13 @@ function App() {
         handleLogout={handleLogout}
       >
         <Switch>
-          <Route path='/login'>
+          <Route exact path='/login'>
             <Login
             handleLogin={handleLogin}
             />
 
           </Route>
-          <Route path='/register'>
+          <Route exact path='/register'>
             <Register
               handleRegister={handleRegister}/>
           </Route>
