@@ -1,11 +1,10 @@
 import React, { useState } from "react";
-import { Redirect } from "react-router-dom";
 // import { createShow } from "../../services/shows";
-import Layout from "../../layout/Layout"
+import Layout from "../../layout/Layout";
 // import "./CreateShow.css";
 
-const TrailCreate = (props) => {
-  const [trail, setTrail] = useState({
+export default function TrailCreate(props) {
+  const [formData, setFormData] = useState({
     name: "",
     location: "",
     duration: "",
@@ -13,79 +12,82 @@ const TrailCreate = (props) => {
     imgURL: "",
   });
 
-  const [isCreated, setCreated] = useState(false);
+  const { name, location, duration, details, imgURL } = useState(false);
+  const { createTrail } = props;
 
-  const handleChange = (event) => {
-    const { name, value } = event.target;
-    console.log(name);
-    console.log(value);
-    setTrail({
-      ...trail,
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevState) => ({
+      ...prevState,
       [name]: value,
-    });
+    }));
   };
 
   // const handleSubmit = async (event) => {
   //   event.preventDefault();
-  //   const created = await createTrail(trail);
+  //   const created = await postTrail(trail);
   //   setCreated({ created });
   // };
 
-  if (isCreated) {
-    return <Redirect to={`/trails`} />;
-  }
+  // if (isCreated) {
+  //   return <Redirect to={`/trails`} />;
+  // }
   return (
-    <div class="ui-form">
-      <div class="two-fields">
-        <Layout user={props.user}>
-          <div class="field-error">
-
-          {/* onSubmit={handleSubmit} */}
-            <h2>Add Trail</h2>
-              <label>Trail Name:</label>
+    <Layout>
+      <form onSubmit={(e) => {
+        e.preventDefault()
+        createTrail(formData)
+      }}>
+        <div className="form">
+            <div className="field-error">
+              {/* onSubmit={handleSubmit} */}
+              <h2>Add Trail</h2>
+              <label>Trail Name:
               <input
                 placeholder="Trail Name"
                 type="text"
                 // name="name"
-                value={trail.name}
+                value={name}
                 onChange={handleChange}
                 // id="input-title"
                 />
-                </div>
-                <label>Location</label>
-                <input
-                placeholder="Location of Trail"
-                type="text"
-                // name="trail"
-                value={trail.location}
-                onChange={handleChange}
-                // id="input-duration"
+                </label>
+            </div>
+            <label>Location
+            <input
+              placeholder="Location of Trail"
+              type="text"
+              // name="trail"
+              value={location}
+              onChange={handleChange}
+              // id="input-duration"
               />
-              <label>Duration</label>
-              <input
-                type="text"
-                placeholder="Duration to Complete"
-                // name="imgURL"
-                value={trail.duration}
-                onChange={handleChange}
-                // id="input-image"
+              </label>
+            <label>Duration
+            <input
+              type="text"
+              placeholder="Duration to Complete"
+              // name="imgURL"
+              value={duration}
+              onChange={handleChange}
+              // id="input-image"
               />
-              <label> Trail Details</label>
-              <input
-                type="text"
-                placeholder="Details (2-4 sentences)"
-                name="details"
-                value={trail.details}
-                onChange={handleChange}
-                // id="input-plot"
+              </label>
+            <label> Trail Details
+            <input
+              type="text"
+              placeholder="Details (2-4 sentences)"
+              name="details"
+              value={details}
+              onChange={handleChange}
+              // id="input-plot"
               />
+              </label>
             <button type="submit" id="add-button">
               Add
             </button>
-        </Layout>
-      </div>
-    </div>
+          </div>
+      </form>
+    </Layout>
   );
-};
-
-export default TrailCreate;
+}
