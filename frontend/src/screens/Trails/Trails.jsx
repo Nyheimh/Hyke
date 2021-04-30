@@ -4,6 +4,7 @@ import Container from "@material-ui/core/Container";
 import Grid from "@material-ui/core/Grid";
 import Card from "@material-ui/core/Card";
 import CardActionArea from "@material-ui/core/CardActionArea";
+import "./Trails.css";
 // import CardActions from "@material-ui/core/CardActions";
 import CardMedia from "@material-ui/core/CardMedia";
 // import CardContent from "@material-ui/core/CardContent";
@@ -36,7 +37,7 @@ export default function Trails() {
         <Grid item xs={12} sm={6} md={4}>
           <Card className={classes.card}>
             <CardActionArea>
-              <CardMedia
+              <CardMedia id="box"
                 component={Link} to="/trails/:id"
                 className={classes.media}
                 image="https://images.unsplash.com/photo-1465188466731-618dfc07a57d?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8aGlrZXN8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60"
@@ -52,7 +53,7 @@ export default function Trails() {
         <Grid item xs={12} sm={6} md={4}>
           <Card className={classes.card}>
             <CardActionArea>
-              <CardMedia
+              <CardMedia id="box"
                 component={Link} to="/trails/:id"
                 className={classes.media}
                 image="https://images.unsplash.com/photo-1524904382563-42060a3c6bd3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=934&q=80"
@@ -67,7 +68,7 @@ export default function Trails() {
         <Grid item xs={12} sm={6} md={4}>
           <Card className={classes.card}>
             <CardActionArea>
-              <CardMedia
+              <CardMedia id="box"
                 className={classes.media}
                 image="https://images.unsplash.com/photo-1571162362234-0a92e908cca9?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80"
                 title="South Lake Tahoe"

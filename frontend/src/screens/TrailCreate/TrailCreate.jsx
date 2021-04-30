@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 // import { createShow } from "../../services/shows";
 import Layout from "../../layout/Layout";
-// import "./CreateShow.css";
+import "./TrailCreate.css";
 
 export default function TrailCreate(props) {
   const [formData, setFormData] = useState({
@@ -41,7 +41,7 @@ export default function TrailCreate(props) {
         <div className="form">
             <div className="field-error">
               {/* onSubmit={handleSubmit} */}
-              <h2>Add Trail</h2>
+              <h2 className="title">Add Trail</h2>
               <label>Trail Name:
               <input
                 placeholder="Trail Name"

@@ -40,7 +40,7 @@ export default function CatEdit(props) {
 
   return (
     <Layout>
-      <div className="form-container">
+      <div className="form">
         <form onSubmit={(e) => {
           e.preventDefault()
           updateTrail(id, formData);

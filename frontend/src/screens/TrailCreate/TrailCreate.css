@@ -12,3 +12,17 @@
   /* Note: backdrop-filter has minimal browser support */
   border-radius: 40px;
 }
+
+
+.title {
+width: 540px;
+height: 80px;
+font-family: Kantumruy;
+font-style: normal;
+font-weight: bold;
+font-size: 48px;
+line-height: 87px;
+letter-spacing: 0.135em;
+color: #FFFFFF;
+mix-blend-mode: overlay;
+}

@@ -2,6 +2,7 @@
 import { Link } from "react-router-dom";
 import Navbar from "../components/Navbar/Navbar";
 import Home from "../screens/Home/Home"
+import Footer from "../components/Footer/Footer"
 // import Trails from "../screens/Trails/Trails"
 
 
@@ -31,6 +32,7 @@ export default function Layout(props) {
       {props.children}
           <Home />
       {/* <Trails /> */}
+      <Footer/>
     </div>
   );
 }

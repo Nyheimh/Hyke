@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500&family=Shojumaru&display=swap');
+
+.footer {
+  width: 100%;
+  padding: 10px 0;
+  margin: 0 auto;
+  margin-top: 100px;
+  background: linear-gradient(117.82deg, rgba(235, 235, 235, 0) 1.58%, rgba(0, 0, 0, 0.4) 81.08%);
+  box-shadow: 0px 4px 24px -1px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(100px);
+  font-family: 'IBM Plex Sans', sans-serif;
+}
+
+
+
+.footer-links {
+  color: white;
+  text-decoration: none;
+  display: flex;
+  justify-content: space-around;
+
+  /* justify-content: space-between; */
+  /* width: 40%; */
+  /* margin: 0 auto; */
+}
+
+.footer-link {
+  /* display: inline; */
+  /* align-items: stretch; */
+  /* justify-content: space-between; */
+  color: white;
+}
+
+.fa {
+  padding: 5px;
+}
+
+#icon a {
+  color: white
+}
+
+/*---------------Media Queries iPad Pro---------------*/
+@media only screen and (max-width: 1366) {
+
+}
+
+
+/*---------------Media Queries iPad---------------*/
+@media only screen and (max-width: 1024) {
+
+}
+
+
+/*---------------Media Queries iPhone X---------------*/
+@media only screen and (max-width: 812) {
+
+}
+
+/*---------------Media Queries iPhone 6/7/8---------------*/
+@media only screen and (max-width: 375) {
+
+
+}
+
+
+
+/* background: linear-gradient(125.53deg, #FFFFFF -158.14%, rgba(255, 255, 255, 0.4) -158.14%, rgba(0, 0, 255, 0.321897) -158.13%, rgba(0, 0, 255, 0.1) -87.33%); */
