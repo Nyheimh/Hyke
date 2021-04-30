@@ -3,7 +3,7 @@ import { Switch, Route, useHistory } from "react-router-dom";
 // import Reviews from "../screens/Reviews";
 import TrailCreate from "../screens/TrailCreate/TrailCreate";
 import TrailDetail from "../screens/TrailDetail/TrailDetail";
-import TrailEdit from "../screens/TrailEdit/TrailEdit";
+import EditTrail from "../screens/EditTrail/EditTrail";
 import Trails from "../screens/Trails/Trails";
 import { getAllReviews } from "../services/reviews";
 import {
@@ -12,7 +12,8 @@ import {
   postTrail,
   putTrail,
 } from "../services/trails";
-import Reviews from '../screens/Review/Review'
+import Reviews from "../screens/Review/Review";
+import Home from "../screens/Home/Home";
 
 export default function MainContainer(props) {
   const [trails, setTrails] = useState([]);
@@ -55,6 +56,7 @@ export default function MainContainer(props) {
   const handleDelete = async (id) => {
     await deleteTrail(id);
     setTrails((prevState) => prevState.filter((trail) => trail.id !== id));
+    history.push("/trails");
   };
 
   return (
@@ -63,20 +65,27 @@ export default function MainContainer(props) {
         <Reviews reviews={reviews} />
       </Route>
       <Route path="/trails/:id/edit">
-        <TrailEdit trails={trails} handleEdit={handleEdit} />
+        <EditTrail allTrails={trails} handleEdit={handleEdit} />
       </Route>
       <Route path="/trails/new">
         <TrailCreate handleCreate={handleCreate} />
       </Route>
-      <Route exact path="/trails/:id">
-        <TrailDetail reviews={reviews} />
+      <Route path="/trails/:id">
+        <TrailDetail
+          allTrails={trails}
+          reviews={reviews}
+          handleDelete={handleDelete}
+        />
       </Route>
-      <Route exact path="/trails">
+      <Route path="/trails">
         <Trails
           trails={trails}
           currentUser={currentUser}
           handleDelete={handleDelete}
         />
+      </Route>
+      <Route path="/">
+        <Home />
       </Route>
     </Switch>
   );

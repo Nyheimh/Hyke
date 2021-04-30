@@ -13,7 +13,7 @@ export default function TrailCreate(props) {
   });
 
   const { name, location, duration, details, imgURL } = useState(false);
-  const { createTrail } = props;
+  const { handleCreate } = props;
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -36,7 +36,7 @@ export default function TrailCreate(props) {
     <Layout>
       <form onSubmit={(e) => {
         e.preventDefault()
-        createTrail(formData)
+        handleCreate(formData)
       }}>
         <div className="form">
             <div className="field-error">

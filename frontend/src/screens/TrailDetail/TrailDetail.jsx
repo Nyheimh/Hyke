@@ -2,10 +2,12 @@ import { useState, useEffect } from "react";
 import Layout from "../../layout/Layout";
 import { Link, useParams } from "react-router-dom";
 import "./TrailDetail.css";
+import Trails from "../Trails/Trails";
+import Reviews from "../Review/Review"
 
 export default function TrailDetail(props) {
   const [trail, setTrail] = useState(null);
-  const { allTrails, removeTrail } = props;
+  const { allTrails, handleDelete } = props;
   const { id } = useParams();
 
   useEffect(() => {
@@ -16,7 +18,6 @@ export default function TrailDetail(props) {
   }, [allTrails, id]);
 
   return (
-    <Layout>
       <div className="trail-detail">
         {/* <img className="trail-image" src={trail.imgURL} alt={trail.title} /> */}
         {trail && (
@@ -26,11 +27,15 @@ export default function TrailDetail(props) {
             <p>{trail.title}</p>
             <Link to={`/trails/${trail.id}/edit`}>
               <button>Update</button>
-            </Link>
-            <button onClick={() => removeTrail(trail.id)}>Release</button>
+          </Link>
+          {/* toggle moddle, then toggle handle delete */}
+          <button onClick={() => handleDelete(trail.id)}>Release</button>
+          <Reviews
+            reviews={trail.reviews}/>
+
           </div>
         )}
       </div>
-    </Layout>
+  
   );
 }

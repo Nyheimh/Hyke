@@ -30,7 +30,7 @@ export default function Layout(props) {
         {/* <Search /> */}
       </header>
       {props.children}
-          <Home />
+          {/* <Home /> */}
       {/* <Trails /> */}
       <Footer/>
     </div>

@@ -45,7 +45,7 @@ export default function Trails(props) {
           <Card className={classes.card}>
             <CardActionArea>
               <CardMedia id="box"
-                component={Link} to="/trails/:id"
+                    component={Link} to={`/trails/${trail.id}`}
                 className={classes.media}
                 image="https://images.unsplash.com/photo-1465188466731-618dfc07a57d?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8aGlrZXN8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60"
                 title={trail.name}

@@ -1,12 +1,12 @@
 class TrailsController < ApplicationController
-  before_action :authorize_request, only: [:create :update, :destroy]
+  before_action :authorize_request, only: [:create, :update, :destroy]
   before_action :set_trail, only: [:show, :update, :destroy]
 
   # GET /trails
   def index
     @trails = Trail.all
 
-    render json: @trails
+    render json: @trails, include: :reviews
   end
 
   # GET /trails/1

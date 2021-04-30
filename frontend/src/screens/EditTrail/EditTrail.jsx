@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
-import Layout from '../../layout/Layout';
+import React, { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
+import Layout from "../../layout/Layout";
 
-export default function CatEdit(props) {
+export default function EditTrail(props) {
   const [formData, setFormData] = useState({
     name: "",
     location: "",
@@ -12,41 +12,42 @@ export default function CatEdit(props) {
   });
 
   const { name, location, duration, details, imgURL } = formData;
-  const { updateTrail, allTrails} = props;
+  const { handleEdit, allTrails } = props;
   const { id } = useParams();
-
 
   useEffect(() => {
     const prefillFormData = () => {
-      const oneTrail = allTrails.find(trail => {
+      const oneTrail = allTrails.find((trail) => {
         return trail.id === Number(id);
-      })
+      });
       const { name, location, duration, details, imgURL } = oneTrail;
       setFormData({ name, location, duration, details, imgURL });
-    }
+    };
     if (allTrails.length) {
-      prefillFormData()
+      prefillFormData();
     }
-  }, [allTrails, id])
-
+  }, [allTrails, id]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData(prevState => ({
+    setFormData((prevState) => ({
       ...prevState,
-      [name]: value
+      [name]: value,
     }));
-  }
+  };
 
   return (
     <Layout>
       <div className="form">
-        <form onSubmit={(e) => {
-          e.preventDefault()
-          updateTrail(id, formData);
-        }}>
+        <form
+          onSubmit={(e) => {
+            e.preventDefault();
+            handleEdit(id, formData);
+          }}
+        >
           <h3>Update Trail</h3>
-          <label>Name:
+          <label>
+            Name:
             <input
               type="text"
               name="name"
@@ -54,8 +55,9 @@ export default function CatEdit(props) {
               onChange={handleChange}
             />
           </label>
-{/* location, duration, details, imgURL */}
-          <label>Location:
+          {/* location, duration, details, imgURL */}
+          <label>
+            Location:
             <input
               type="text"
               name="location"
@@ -63,36 +65,36 @@ export default function CatEdit(props) {
               onChange={handleChange}
             />
           </label>
-          <label>Duration:
+          <label>
+            Duration:
             <input
               type="text"
               name="duration"
               value={duration}
               onChange={handleChange}
             />
-
           </label>
-          <label>Details:
+          <label>
+            Details:
             <input
               type="text"
               name="details"
               value={details}
               onChange={handleChange}
             />
-
           </label>
-          <label>Image Url:
+          <label>
+            Image Url:
             <input
               type="text"
               name="imgURL"
               value={imgURL}
               onChange={handleChange}
             />
-
           </label>
           <button>Submit</button>
         </form>
       </div>
     </Layout>
-  )
+  );
 }
