@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import Layout from "../../layout/Layout";
 import './EditTrail.css'
 
 export default function EditTrail(props) {
@@ -9,10 +8,9 @@ export default function EditTrail(props) {
     location: "",
     duration: "",
     details: "",
-    imgURL: "",
   });
 
-  const { name, location, duration, details, imgURL } = formData;
+  const { name, location, duration, details } = formData;
   const { handleEdit, allTrails } = props;
   const { id } = useParams();
 
@@ -21,8 +19,8 @@ export default function EditTrail(props) {
       const oneTrail = allTrails.find((trail) => {
         return trail.id === Number(id);
       });
-      const { name, location, duration, details, imgURL } = oneTrail;
-      setFormData({ name, location, duration, details, imgURL });
+      const { name, location, duration, details } = oneTrail;
+      setFormData({ name, location, duration, details });
     };
     if (allTrails.length) {
       prefillFormData();
@@ -38,7 +36,6 @@ export default function EditTrail(props) {
   };
 
   return (
-    <Layout>
       <div className="edit-form">
         <form
           onSubmit={(e) => {
@@ -86,15 +83,6 @@ export default function EditTrail(props) {
               onChange={handleChange}
               />
           </label>
-          <label>
-            Image Url:
-            <input
-              type="text"
-              name="imgURL"
-              value={imgURL}
-              onChange={handleChange}
-              />
-          </label>
           </div>
           <div className="edit-button">
 
@@ -102,6 +90,5 @@ export default function EditTrail(props) {
           </div>
         </form>
       </div>
-    </Layout>
   );
 }
