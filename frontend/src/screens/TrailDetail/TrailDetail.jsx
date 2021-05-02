@@ -27,17 +27,16 @@ export default function TrailDetail(props) {
           <p>{trail.location}</p>
           <p>{trail.duration}</p>
           <p>{trail.details}</p>
-          <Review reviews={trail.reviews} />
-          <Link to={`/trails/${trail.id}/edit`}>
+          <Review className="trail-reviews" reviews={trail.reviews} />
             <div className="trail-detail-buttons">
+          <Link to={`/trails/${trail.id}/edit`}>
               <button className="trail-detail-search-buttons">Update</button>
-            </div>
           </Link>
           {/* toggle moddle, then toggle handle delete */}
-          <div className="trail-detail-buttons">
             <button class onClick={() => handleDelete(trail.id)}>
               Release
             </button>
+
           </div>
         </section>
       )}

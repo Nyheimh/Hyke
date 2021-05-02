@@ -29,6 +29,7 @@ export default function Register(props) {
       }}
     >
       <h3 className="register-title"> Register </h3>
+      <br/>
       <label>
         Name:
         <input
@@ -39,7 +40,7 @@ export default function Register(props) {
           onChange={handleChange}
         />
       </label>
-
+      <br/>
       <label>
         Username:
         <input
@@ -50,7 +51,7 @@ export default function Register(props) {
           onChange={handleChange}
         />
       </label>
-
+      <br/>
       <label>
         Email:
         <input
@@ -61,7 +62,7 @@ export default function Register(props) {
           onChange={handleChange}
         />
       </label>
-
+      <br/>
       <label>
         Password:
         <input
@@ -72,7 +73,7 @@ export default function Register(props) {
           onChange={handleChange}
         />
       </label>
-
+      <br/>
       {/* <label> Confirm Password:
         <input type="password" name="confirm password" value={confirm} onChange={handleChange} />
         
