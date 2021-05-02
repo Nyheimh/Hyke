@@ -12,20 +12,16 @@ export default function Layout(props) {
     <div>
       {/* <header> */}
       <Navbar currentUser={currentUser} handleLogout={handleLogout} />
-
-      {/* <hr /> */}
       {currentUser && (
         <>
-          {/* <Link to ='/trails'>'Trails</Link>
-            <Link to = '/reviews' > Reviews</Link> */}
+
         </>
       )}
-      {/* <Search /> */}
-      {/* </header> */}
+
       {props.children}
-      {/* <Home /> */}
-      {/* <Trails /> */}
+
       <Footer />
     </div>
   );
 }
+

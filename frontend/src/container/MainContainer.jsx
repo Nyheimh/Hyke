@@ -14,6 +14,7 @@ import {
 } from "../services/trails";
 import Reviews from "../screens/Review/Review";
 import Home from "../screens/Home/Home";
+import About from "../screens/About/About"
 
 export default function MainContainer(props) {
   const [trails, setTrails] = useState([]);
@@ -83,6 +84,9 @@ export default function MainContainer(props) {
           currentUser={currentUser}
           handleDelete={handleDelete}
         />
+      </Route>
+      <Route path="/about">
+        <About />
       </Route>
       <Route path="/">
         <Home />
