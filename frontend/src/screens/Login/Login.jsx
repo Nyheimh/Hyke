@@ -58,9 +58,11 @@ export default function Login(props) {
         </label>
             </div>
         <div className="button-container">
-          
-        <Link to="/register">Register</Link>
-        <button>Submit</button>
+          <Link to="/register">Register</Link>
+          <div className="button">
+
+        <button >Submit</button>
+          </div>
       </div>
       </div>
     </form>
