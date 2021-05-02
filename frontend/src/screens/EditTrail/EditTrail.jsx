@@ -39,7 +39,7 @@ export default function EditTrail(props) {
 
   return (
     <Layout>
-      <div className="form">
+      <div className="edit-form">
         <form
           onSubmit={(e) => {
             e.preventDefault();
@@ -47,6 +47,8 @@ export default function EditTrail(props) {
           }}
         >
           <h3>Update Trail</h3>
+          <div className="edit-trail-label">
+
           <label>
             Name:
             <input
@@ -54,7 +56,7 @@ export default function EditTrail(props) {
               name="name"
               value={name}
               onChange={handleChange}
-            />
+              />
           </label>
           {/* location, duration, details, imgURL */}
           <label>
@@ -64,7 +66,7 @@ export default function EditTrail(props) {
               name="location"
               value={location}
               onChange={handleChange}
-            />
+              />
           </label>
           <label>
             Duration:
@@ -73,7 +75,7 @@ export default function EditTrail(props) {
               name="duration"
               value={duration}
               onChange={handleChange}
-            />
+              />
           </label>
           <label>
             Details:
@@ -82,7 +84,7 @@ export default function EditTrail(props) {
               name="details"
               value={details}
               onChange={handleChange}
-            />
+              />
           </label>
           <label>
             Image Url:
@@ -91,9 +93,13 @@ export default function EditTrail(props) {
               name="imgURL"
               value={imgURL}
               onChange={handleChange}
-            />
+              />
           </label>
+          </div>
+          <div className="edit-button">
+
           <button>Submit</button>
+          </div>
         </form>
       </div>
     </Layout>

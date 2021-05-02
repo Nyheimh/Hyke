@@ -28,14 +28,6 @@
   text-decoration: underline;
 }
 
-
-/* .home__headerRight {
-  display: flex;
-  align-items: center;
-  min-width: 13vw;
-  justify-content: space-between;
-} */
-
 .home__headerRight > .MuiSvgIcon-root {
   margin-right: 20px;
 }
@@ -46,21 +38,12 @@
   margin-top: 10%;
   flex-direction: column;
   font-family: "Lobster";
-
   font-style: normal;
   font-weight: bold;
   font-size: 48px;
   line-height: 87px;
   letter-spacing: 0.135em;
   color: #000;
-
-mix-blend-mode: overlay;
-
-
+  mix-blend-mode: overlay;
   
 }
-
-/* .home__body > img {
-  object-fit: contain;
-  height: 100px;
-} */

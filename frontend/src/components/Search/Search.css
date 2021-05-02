@@ -35,10 +35,10 @@
 .search-buttons button {
   margin: 5px;
   padding: 7px 15px;
-  background-color: #fff;
+  background-color: #ECF39E;
   border: 1px solid white;
   text-transform: inherit;
-  color: #5f6368;
+  color: #132A13;
 }
 
 .search-buttons button:hover {

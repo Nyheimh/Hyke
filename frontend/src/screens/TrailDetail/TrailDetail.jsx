@@ -33,7 +33,7 @@ export default function TrailDetail(props) {
               <button className="trail-detail-search-buttons">Update</button>
           </Link>
           {/* toggle moddle, then toggle handle delete */}
-            <button class onClick={() => handleDelete(trail.id)}>
+            <button onClick={() => handleDelete(trail.id)}>
               Release
             </button>
 
