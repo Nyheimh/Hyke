@@ -21,7 +21,7 @@ export default function TrailDetail(props) {
     <div className="trail-detail">
       {/* <img className="trail-image" src={trail.imgURL} alt={trail.title} /> */}
       {trail && (
-        <section className="form">
+        <section className="trail-detail-form">
           <img className="img" src={trail.img_url} alt={trail.name} />
           <h3>{trail.name}</h3>
           <p>{trail.location}</p>
@@ -29,12 +29,12 @@ export default function TrailDetail(props) {
           <p>{trail.details}</p>
           <Review reviews={trail.reviews} />
           <Link to={`/trails/${trail.id}/edit`}>
-            <div className="search-buttons">
-              <button className="search-buttons">Update</button>
+            <div className="trail-detail-buttons">
+              <button className="trail-detail-search-buttons">Update</button>
             </div>
           </Link>
           {/* toggle moddle, then toggle handle delete */}
-          <div className="search-buttons">
+          <div className="trail-detail-buttons">
             <button class onClick={() => handleDelete(trail.id)}>
               Release
             </button>
