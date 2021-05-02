@@ -4,15 +4,15 @@
   /* display: flex; */
   margin: auto;
   width: 900px;
-  height: 700px;
-  border: 5px black solid;
+  height: 800px;
+  /* border: 1px black solid; */
   background: linear-gradient(117.82deg, rgba(235, 235, 235, 0) 1.58%, rgba(95, 95, 95, 0.4) 81.08%);
   box-shadow: 0px 4px 24px -1px rgba(0, 0, 0, 0.2);
   backdrop-filter: blur(100px);
-
   border-radius: 40px;
   color: #ECF39E;
 }
+
 .img {
 padding-top: 15px;
 width: 500px;
@@ -45,4 +45,113 @@ height: 390px;
 }
 .trail-detail-search-buttonsHidden {
   display: none !important
+}
+
+
+
+/*---------------Media Queries iPad Pro---------------*/
+@media only screen and (max-width: 1366) {
+  .trail-detail-container {
+    font-size: 45px;
+    width: 50%;
+    color:black;
+}
+
+}
+
+
+/*---------------Media Queries iPad---------------*/
+@media only screen and (max-width: 1024) {
+
+  .trail-detail-container {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 20px; 
+    color:black;
+}
+
+.trail-detail-buttons {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.trail-detail-buttons button {
+  margin: 5px;
+  padding: 7px 15px;
+  background-color: #ECF39E;
+  border: 1px solid white;
+  text-transform: inherit;
+  color: #132A13;
+}
+
+.trail-detail-buttons button:hover {
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  background-image: -webkit-linear-gradient(top, #f8f8f8, #f1f1f1);
+  background-color: #f8f8f8;
+  border: 1px solid #c6c6c6;
+  color: #222;
+}
+}
+
+
+/*---------------Media Queries iPhone X---------------*/
+@media only screen and (max-width: 480px) {
+  .trail-detail-container {
+    font-size: 15px;
+    width: 50%;
+    color:black;
+    margin-right: auto;
+    margin-left: auto;
+}
+.trail-detail-buttons {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.trail-detail-buttons button {
+  margin: 5px;
+  padding: 7px 15px;
+  background-color: #ECF39E;
+  border: 1px solid white;
+  text-transform: inherit;
+  color: #132A13;
+}
+
+.trail-detail-form {
+  width: 350px;
+  height: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.img {
+  padding-top: 15px;
+  width: 200px;
+  height: 200px;
+  }
+
+}
+
+/*---------------Media Queries iPhone 6/7/8---------------*/
+@media only screen and (max-width: 415px) {
+
+.trail-detail-buttons {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.trail-detail-buttons button {
+  margin: 5px;
+  padding: 7px 15px;
+  background-color: #000;
+  border: 1px solid white;
+  text-transform: inherit;
+  color: #ECF39E;
+}
+
 }
