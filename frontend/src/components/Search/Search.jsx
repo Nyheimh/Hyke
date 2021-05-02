@@ -20,10 +20,10 @@ const Search = () => {
 
   return (
     <form className="search">
-      <div className="search__input">
+      <div className="search-input">
         <input value={search} type="text" placeholder="Search" onChange={(e) => setSearch(e.target.value)} />
       </div>
-      <div className="search__buttons">
+      <div className="search-buttons">
         <button type="submit" onClick={search} variant="outlined"> Search </button>
         <button variant="outlined">Random Hyke</button>
 

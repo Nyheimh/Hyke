@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from 'react-router-dom'
 // import "font-awesome/css/font-awesome.min.css";
 import "./Footer.css";
 
@@ -6,6 +7,12 @@ const Footer = () => {
   return (
     <div className="footer">
       <div className="footer-links">
+      <Link to="/"> Home </Link>
+        <Link to="/trails">Hykes</Link>
+        <Link to="/trails/new">Add Hyke</Link>
+        <Link to="/about">About</Link>
+
+
         <a
           className="footer-link"
           href="https://www.linkedin.com/in/nyheimhunter/"

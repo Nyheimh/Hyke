@@ -1,20 +1,35 @@
 import "./Navbar.css";
-import Header from "../../components/Header/Header"
+// import Header from "../../components/Header/Header"
 import { Link } from "react-router-dom";
 
 
 
-export default function Navbar() {
+export default function Navbar(props) {
+
+
+  const { currentUser, handleLogout } = props
+  
   return (
     <div className="navbar">
       {/* <Header /> */}
       <div className="links">
         <Link to="/"> Home </Link>
         <Link to="/trails">Hykes</Link>
-        <Link to="/trails/new">Add Hyke</Link>
+        {currentUser &&
+        <Link to="/trails/new">Add Hyke</Link>}
         <Link to="/about">About</Link>
-      </div>
-      
+      {currentUser ? (
+        <div className="username">
+          <p className="welcome">Welcome, {currentUser.username}</p>
+          <section className="button">
+
+            <button onClick={handleLogout}>Logout</button>
+          </section>
+          </div>
+        ) : (
+          <Link to="/login">Login/Register</Link>
+          )}
+          </div>
     </div>
   );
 }

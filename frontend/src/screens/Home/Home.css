@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+.title {
+  font-family: "Lobster";
+}
+
 .home {
   display: flex;
   flex-direction: column;
@@ -23,25 +29,38 @@
 }
 
 
-.home__headerRight {
+/* .home__headerRight {
   display: flex;
   align-items: center;
   min-width: 13vw;
   justify-content: space-between;
-}
+} */
 
 .home__headerRight > .MuiSvgIcon-root {
   margin-right: 20px;
 }
 
-.home__body {
+.home-body {
   flex: 1;
   display: flex;
   margin-top: 10%;
   flex-direction: column;
+  font-family: "Lobster";
+
+  font-style: normal;
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 87px;
+  letter-spacing: 0.135em;
+  color: #000;
+
+mix-blend-mode: overlay;
+
+
+  
 }
 
-.home__body > img {
+/* .home__body > img {
   object-fit: contain;
   height: 100px;
-}
+} */

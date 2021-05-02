@@ -20,13 +20,13 @@ export default function Login(props) {
   };
 
   return (
-    <form
+    <form className="login"
       onSubmit={(e) => {
         e.preventDefault();
         handleLogin(formData);
       }}
     >
-      <h3> Login </h3>
+      <h3 className="login-title"> Login </h3>
 
       <label>
         Username:

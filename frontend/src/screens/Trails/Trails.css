@@ -1,3 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+
 #box {
-  border: purple 5px solid;
+  border: white 5px solid;
+  box-shadow: 2px;
+  border-radius: 10px;
+}
+
+.title {
+  font-family: "Lobster";
+  color: rgba(0, 0, 0, 1);
+  margin: auto;
 }

@@ -3,7 +3,7 @@ import Layout from "../../layout/Layout";
 import { Link, useParams } from "react-router-dom";
 import "./TrailDetail.css";
 import Trails from "../Trails/Trails";
-import Reviews from "../Review/Review"
+import Review from "../Review/Review"
 
 export default function TrailDetail(props) {
   const [trail, setTrail] = useState(null);
@@ -39,8 +39,8 @@ export default function TrailDetail(props) {
             <button class onClick={() => handleDelete(trail.id)}>Release</button>
             
             </div>
-          <Reviews
-            reviews={trail.reviews}/>
+          <Review
+            review={trail.review}/>
           </div>
         )}
         </div>

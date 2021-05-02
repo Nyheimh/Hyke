@@ -36,7 +36,7 @@ export default function Trails(props) {
 
   return (
     <Container maxWidth="lg" className={classes.blogsContainer}>
-      <h3>Trails</h3>
+      <h3 className="title">Trails</h3>
       <Grid container spacing={3}>
         {trails.map((trail) => (
           <React.Fragment key={trail.id}>

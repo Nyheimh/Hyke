@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import Layout from "../../layout/Layout";
+import './EditTrail.css'
 
 export default function EditTrail(props) {
   const [formData, setFormData] = useState({
