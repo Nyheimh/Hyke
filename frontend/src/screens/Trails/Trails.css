@@ -12,3 +12,29 @@
   color: rgba(0, 0, 0, 1);
   margin: auto;
 }
+
+
+/*---------------Media Queries iPad Pro---------------*/
+@media only screen and (max-width: 1366) {
+
+}
+
+
+/*---------------Media Queries iPad---------------*/
+@media only screen and (max-width: 1024) {
+
+}
+
+
+/*---------------Media Queries iPhone X---------------*/
+@media only screen and (max-width: 480) {
+
+  }
+
+
+/*---------------Media Queries iPhone 6/7/8---------------*/
+@media only screen and (max-width: 375px) {
+
+
+  }
+

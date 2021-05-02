@@ -18,10 +18,10 @@
   /* Note: backdrop-filter has minimal browser support */
   display: flex;
   text-align: center;
-  width: 100%;
+  width: 100vw;
   padding: 10px 0;
   margin: 0 auto;
-  margin-top: 100px;
+  margin-bottom: 100px;
   background: linear-gradient(125.53deg, #FFFFFF -642.42%, rgba(255, 255, 255, 0.4) -642.41%, rgba(255, 255, 255, 0.321897) -642.4%, rgba(255, 255, 255, 0.3) -571.6%);
   box-shadow: 0px 4px 24px rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(100px);
@@ -32,7 +32,7 @@
   display: flex;
   justify-content: space-around;
   text-align: center;
-  font-size: 80px;
+  font-size: 40px;
   margin:  auto 0;
   margin-left: 20px;
   width: 100%;
@@ -92,79 +92,72 @@ justify-content: space-between;
   display: none !important
 }
 
-/*---------------IDs---------------*/
 
-#appName {
-  margin-left: 20px;
-  font-size: 30px;
-  font-family: 'Banger', cursive;
+/*---------------Media Queries iPad Pro---------------*/
+@media only screen and (max-width: 1366) {
+  .links link {
+    font-size: 45px;
+    width: 50%;
 }
 
+/* .userWelcome {
+    padding-left: 255px;
+} */
+
+#appName {
+    font-size: 60px;
+}
+}
 
 
 /*---------------Media Queries iPad---------------*/
-
-@media only screen and (min-width: 375px) {
+@media only screen and (max-width: 1024) {
 
   .nav {
-      display: flex;
-      justify-content: space-between;
-      padding-right: 20px; 
-  }
+    display: flex;
+    justify-content: space-between;
+    padding-right: 20px; 
+}
 
-  .links {
-      font-size: 50px;
-      width: 50%;
-  }
+.links {
+    font-size: 50px;
+    width: 50%;
+}
 
-  #appName {
-      font-size: 45px;
-  }
+#appName {
+    font-size: 45px;
+}
 
 }
 
-/*---------------Media Queries iPad Pro---------------*/
 
-@media only screen and (min-width: 876px) {
-
-  .links link {
-      font-size: 45px;
-      width: 50%;
-  }
-
-  /* .userWelcome {
-      padding-left: 255px;
-  } */
-
-  #appName {
-      font-size: 60px;
-  }
+/*---------------Media Queries iPhone X---------------*/
+@media only screen and (max-width: 480) {
+  .links {
+    font-size: 30px;
+    width: 50%;
+}
+.welcome {
+  font-family: "Lobster";
+  font-size: 25px;
+  display: flex;
+  justify-content: flex-end;
+}
 
 }
 
-/*---------------Media Queries Laptop---------------*/
+/*---------------Media Queries iPhone 6/7/8---------------*/
+@media only screen and (max-width: 415px) {
 
-/* 
-@media only screen and (min-width: 1366px) {
-  .links link {
-      font-size: 40px;
-      width: 45%;
-  }
-
-  #appName {
-      font-size: 75px;
-  }
-} */
-
-/*---------------Media Queries Desktop---------------*/
-
-
-/* @media only screen and (min-width: 1801px) {
   .links {
-      font-size: 40px;
-  }
+    font-size: 25px;
+    width: 50%;
+}
+.welcome {
+  font-family: "Lobster";
+  font-size: 20px;
+  display: flex;
+  justify-content: flex-end;
+}
 
-  #appName {
-      font-size: 75px;
-  }
-} */
+}

@@ -1,6 +1,5 @@
 // import { RateReviewSharp } from '@material-ui/icons';
 import React from 'react'
-import './Review.css'
 
 export default function Review(props) {
   const { reviews } = props;

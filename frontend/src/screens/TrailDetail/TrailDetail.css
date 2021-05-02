@@ -24,13 +24,14 @@ height: 390px;
 }
 
 
-.search__buttons {
+.search-buttons {
   margin-top: 30px;
-  /* display: flex; */
-  justify-content: center;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
-.search__buttons button {
+.search-buttons button {
   margin: 5px;
   padding: 7px 15px;
   background-color: #ECF39E;
@@ -39,13 +40,13 @@ height: 390px;
   color: #132A13;
 }
 
-.search__buttons button:hover {
+.search-buttons button:hover {
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
   background-image: -webkit-linear-gradient(top, #f8f8f8, #f1f1f1);
   background-color: #f8f8f8;
   border: 1px solid #c6c6c6;
   color: #222;
 }
-.search__buttonsHidden {
+.search-buttonsHidden {
   display: none !important
 }
