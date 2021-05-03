@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import { Switch, Route, useHistory } from "react-router-dom";
-// import Reviews from "../screens/Reviews";
 import TrailCreate from "../screens/TrailCreate/TrailCreate";
 import TrailDetail from "../screens/TrailDetail/TrailDetail";
 import EditTrail from "../screens/EditTrail/EditTrail";
@@ -57,7 +56,7 @@ export default function MainContainer(props) {
   const handleDelete = async (id) => {
     await deleteTrail(id);
     setTrails((prevState) => prevState.filter((trail) => trail.id !== id));
-    // history.push("/trails");
+    // history.push("/trails"); if I want to remove modal
   };
 
   return (
