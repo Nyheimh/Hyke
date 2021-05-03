@@ -10,7 +10,7 @@
   margin-top: 40px;
   max-width: 560px;
 }
-/* Made the search bar span out */
+
 .search-input > input {
   flex: 1;
   padding: 10px 20px;
