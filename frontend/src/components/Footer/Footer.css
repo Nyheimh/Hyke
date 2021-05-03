@@ -11,8 +11,6 @@
   font-family: 'Lobster', sans-serif;
 }
 
-
-
 .footer-links {
   color: white;
   text-decoration: none;
@@ -23,10 +21,7 @@
 .footer-links a {
   color: #ffff;
   text-decoration: none;
-  /* text-align: center; */
-  
   }
-
 
 .footer-link {
   color: white;
@@ -39,30 +34,3 @@
 #icon a {
   color: white
 }
-
-/*---------------Media Queries iPad Pro---------------*/
-@media only screen and (max-width: 1366) {
-
-}
-
-
-/*---------------Media Queries iPad---------------*/
-@media only screen and (max-width: 1024) {
-
-}
-
-
-/*---------------Media Queries iPhone X---------------*/
-@media only screen and (max-width: 812) {
-
-}
-
-/*---------------Media Queries iPhone 6/7/8---------------*/
-@media only screen and (max-width: 375) {
-
-
-}
-
-
-
-/* background: linear-gradient(125.53deg, #FFFFFF -158.14%, rgba(255, 255, 255, 0.4) -158.14%, rgba(0, 0, 255, 0.321897) -158.13%, rgba(0, 0, 255, 0.1) -87.33%); */
