@@ -10,7 +10,6 @@ export default function Navbar(props) {
   
   return (
     <div className="navbar">
-      {/* <Header /> */}
       <div className="links">
         <Link to="/"> Home </Link>
         <Link to="/trails">Hykes</Link>
@@ -20,7 +19,7 @@ export default function Navbar(props) {
       {currentUser ? (
         <div className="username">
           <p className="welcome">Welcome, {currentUser.username}</p>
-          <section className="button">
+          <section className="navbar-button">
 
             <button onClick={handleLogout}>Logout</button>
           </section>

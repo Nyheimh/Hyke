@@ -5,7 +5,6 @@
 
 
 .navbar {
-  display: flex;
   text-align: center;
   width: 100vw;
   padding: 10px 0;
@@ -82,10 +81,6 @@ justify-content: space-between;
     width: 50%;
 }
 
-/* .userWelcome {
-    padding-left: 255px;
-} */
-
 #appName {
     font-size: 60px;
 }
@@ -114,32 +109,24 @@ justify-content: space-between;
 
 
 /*---------------Media Queries iPhone X---------------*/
-@media only screen and (max-width: 480) {
-  .links {
-    font-size: 30px;
-    width: 50%;
-}
-.welcome {
-  font-family: "Lobster";
-  font-size: 25px;
-  display: flex;
-  justify-content: flex-end;
-}
-
-}
-
-/*---------------Media Queries iPhone 6/7/8---------------*/
-@media only screen and (max-width: 415px) {
-
+@media only screen and (max-width: 480px) {
   .links {
     font-size: 25px;
     width: 50%;
+    display: flex;
+    justify-content: space-around;
 }
-.welcome {
-  font-family: "Lobster";
-  font-size: 20px;
-  display: flex;
-  justify-content: flex-end;
+.navbar {
+  width: 50%;
+  display: inline-block;
+  justify-content: space-evenly;
+}
+
+.navbar-button button {
+  background-color: #000;
+  border: 1px solid white;
+  text-transform: inherit;
+  color: #ECF39E;
 }
 
 }
