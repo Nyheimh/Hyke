@@ -55,7 +55,7 @@ export default function EditTrail(props) {
               onChange={handleChange}
               />
           </label>
-          {/* location, duration, details, imgURL */}
+          <br />
           <label>
             Location:
             <input
@@ -65,20 +65,23 @@ export default function EditTrail(props) {
               onChange={handleChange}
               />
           </label>
+          <br />
           <label>
-            Duration:
+            Total Miles:
             <input
-              type="text"
+              type="number"
               name="duration"
               value={duration}
               onChange={handleChange}
               />
           </label>
+          <br />
           <label>
             Details:
-            <input
+            <input className="edit-details-input"
               type="text"
               name="details"
+              size="25"
               value={details}
               onChange={handleChange}
               />
