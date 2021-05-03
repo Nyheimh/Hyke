@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import './EditTrail.css'
+import "./EditTrail.css";
 
 export default function EditTrail(props) {
   const [formData, setFormData] = useState({
@@ -36,16 +36,15 @@ export default function EditTrail(props) {
   };
 
   return (
-      <div className="edit-form">
-        <form
-          onSubmit={(e) => {
-            e.preventDefault();
-            handleEdit(id, formData);
-          }}
-        >
-          <h3>Update Trail</h3>
-          <div className="edit-trail-label">
-
+    <div className="edit-form">
+      <form
+        onSubmit={(e) => {
+          e.preventDefault();
+          handleEdit(id, formData);
+        }}
+      >
+        <h3>Update Trail</h3>
+        <div className="edit-trail-label">
           <label>
             Name:
             <input
@@ -53,7 +52,7 @@ export default function EditTrail(props) {
               name="name"
               value={name}
               onChange={handleChange}
-              />
+            />
           </label>
           <br />
           <label>
@@ -63,7 +62,7 @@ export default function EditTrail(props) {
               name="location"
               value={location}
               onChange={handleChange}
-              />
+            />
           </label>
           <br />
           <label>
@@ -73,25 +72,25 @@ export default function EditTrail(props) {
               name="duration"
               value={duration}
               onChange={handleChange}
-              />
+            />
           </label>
           <br />
           <label>
             Details:
-            <input className="edit-details-input"
+            <input
+              className="edit-details-input"
               type="text"
               name="details"
               size="25"
               value={details}
               onChange={handleChange}
-              />
+            />
           </label>
-          </div>
-          <div className="edit-button">
-
+        </div>
+        <div className="edit-button">
           <button>Submit</button>
-          </div>
-        </form>
-      </div>
+        </div>
+      </form>
+    </div>
   );
 }
