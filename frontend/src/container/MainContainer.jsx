@@ -57,7 +57,7 @@ export default function MainContainer(props) {
   const handleDelete = async (id) => {
     await deleteTrail(id);
     setTrails((prevState) => prevState.filter((trail) => trail.id !== id));
-    history.push("/trails");
+    // history.push("/trails");
   };
 
   return (

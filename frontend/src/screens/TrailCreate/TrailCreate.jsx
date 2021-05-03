@@ -57,7 +57,7 @@ export default function TrailCreate(props) {
           <label>
             Miles (Total)
             <input
-              type="integer"
+              type="number"
               placeholder="Total Miles"
               name="duration"
               value={duration}
