@@ -1,6 +1,4 @@
 import React, { useState } from "react";
-// import { createShow } from "../../services/shows";
-import Layout from "../../layout/Layout";
 import "./TrailCreate.css";
 
 export default function TrailCreate(props) {
@@ -12,7 +10,7 @@ export default function TrailCreate(props) {
     imgURL: "",
   });
 
-  const { name, location, duration, details, imgURL } = useState(false);
+  const { name, location, duration, details } = useState(false);
   const { handleCreate } = props;
 
   const handleChange = (e) => {
@@ -33,7 +31,6 @@ export default function TrailCreate(props) {
       >
         <div className="form">
           <div className="field">
-            {/* onSubmit={handleSubmit} */}
             <h2 className="title">Add Trail</h2>
             <label>
               Trail Name:
@@ -43,7 +40,7 @@ export default function TrailCreate(props) {
                 name="name"
                 value={name}
                 onChange={handleChange}
-                // id="input-title"
+                
               />
             </label>
           <label>
@@ -54,18 +51,17 @@ export default function TrailCreate(props) {
               name="location"
               value={location}
               onChange={handleChange}
-              // id="input-duration"
+              
               />
           </label>
           <label>
-            Duration
+            Miles (Total)
             <input
-              type="text"
-              placeholder="Duration to Complete"
+              type="integer"
+              placeholder="Total Miles"
               name="duration"
               value={duration}
               onChange={handleChange}
-              // id="input-image"
               />
           </label>
           <label>
@@ -77,7 +73,6 @@ export default function TrailCreate(props) {
               name="details"
               value={details}
               onChange={handleChange}
-              // id="input-plot"
               />
           </label>
           <button type="submit" id="add-button">
