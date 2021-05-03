@@ -48,7 +48,6 @@ Hyke is an application that allows users to view a trail. The users are allowed 
 |      HTML, CSS3       | Frontend development  |
 |   React Router   | Frontend development |
 |   Authorization  | Login for Backend and Frontend |
-| React Semantic Ui | Implementation of addons. |
 |    Ruby On Rails      | Backend Creation and Deployment |
 |  Material Ui  | Development of CSS |
 
@@ -112,30 +111,30 @@ src
 
 | Component                 | Priority | Estimated Time | Time Invested | Actual Time |
 | ------------------------- | :------: | :------------: | :-----------: | :---------: |
-| Hyke - Proposal                  |    H     |      2 hrs      |     hrs      |    hrs     |
-| Rails - Controllers           |    H     |      2 hrs      |      hr      |     hr     |
-| Rails - Seed      |    H     |      2 hrs      |     hrs      |    hrs     |
-| Rails - Routes      |    H     |      2 hrs      |     hrs      |    hrs     |
-| Rails - Authorization      |    H     |      3.5 hrs      |     hrs      |    hrs     |
-| Rails - CORs        |    H     |      2 hrs      |     hrs      |    hrs     |
-| Rails - CRUD        |    H     |      2 hrs      |      hr      |     hr     |
-| Deployment of Backend        |    H     |      2 hrs      |      hr      |     hr     |
-| React - Routes |    H     |      3 hrs      |     hrs      |   hrs     |
-| Frontend - Navbar |    H     |      3 hrs      |      hr      |     hr     |
-| Frontend - Homepage |    H     |      3 hrs      |      hr      |     hr     |
-| Frontend - Header |    H     |      2 hrs      |      hr      |     hr     |
-| Frontend - Search |    H     |      3 hrs      |      hr      |     hr     |
-| Frontend - Hyke |    H     |       3 hrs      |      hr      |     hr     |
-| Frontend - Sign Up |    H     |      3 hrs      |      hr      |     hr     |
-| Frontend - Sign In |    H     |      3 hrs      |      hr      |     hr     |
-| Frontend - Footer |    H     |      1.5 hrs      |      hr      |     hr     |
-| Frontend - Add Hyke |    H     |      2 hrs      |      hr      |     hr     |
-| Frontend - Hyke Details |    H     |      2 hrs      |      hr      |     hr     |
-| Frontend - Hyke Review |    H     |      2 hrs      |      hr      |     hr     |
-| Frontend - Sign In |    H     |      2 hrs      |      hr      |     hr     |
-| Frontend - Deployment |    H     |     3 hrs      |      hr      |     hr     |
-| Frontend - CSS |    H     |      4 hrs      |      hr      |     hr     |
-| Total                     |    H     |    54 hrs     |     hrs     |    TBD    |
+| Hyke - Proposal                  |    H     |      2 hrs      |    2 hrs      |   2 hrs     |
+| Rails - Controllers           |    H     |      2 hrs      |      1.5hr      |     2.23hr     |
+| Rails - Seed      |    H     |      2 hrs      |    2 hrs      |   2.17 hrs     |
+| Rails - Routes      |    H     |      2 hrs      |    1 hrs      |    2 hr     |
+| Rails - Authorization      |    H     |      3.5 hrs      |    2 hrs      |   2 hrs     |
+| Rails - CORs        |    H     |      2 hrs      |    1 hr      |   1 hr     |
+| Rails - CRUD        |    H     |      2 hrs      |     2 hrs      |    2 hrs     |
+| Deployment of Backend        |    H     |      2 hrs      |     1 hr      |    1 hr     |
+| React - Routes |    H     |      3 hrs      |    2 hrs      |  2 hrs     |
+| Frontend - Navbar |    H     |      3 hrs      |   3 hrs      |    3 hrs     |
+| Frontend - Homepage |    H     |      3 hrs      |     2 hrss      |    2 hrs     |
+| Frontend - Header |    H     |      2 hrs      |     2 hrs      |    2 hrs     |
+| Frontend - Search |    H     |      3 hrs      |     2 hrs      |    2 hrs     |
+| Frontend - Hyke |    H     |       3 hrs      |     2 hrs      |    2 hrs     |
+| Frontend - Sign Up |    H     |      3 hrs      |     2 hrs      |    2 hrs     |
+| Frontend - Sign In |    H     |      3 hrs      |     1 hr      |    1 hr     |
+| Frontend - Footer |    H     |      1.5 hrs      |     2 hrs      |    2 hrs     |
+| Frontend - Add Hyke |    H     |      2 hrs      |     2 hrs      |    2 hrs     |
+| Frontend - Hyke Details |    H     |      2 hrs      |    2  hrs     |    2 hrs     |
+| Frontend - Hyke Review |    H     |      2 hrs      |     2 hrs      |    2 hrs     |
+| Frontend - Sign In |    H     |      2 hrs      |     2 hrs      |    2 hrs     |
+| Frontend - Deployment |    H     |     3 hrs      |    2  hrs      |    2 hrs     |
+| Frontend - CSS |    H     |      4 hrs      |     5 hrs      |     5 hrs     |
+| Total                     |    H     |    54 hrs     |     46.5 hrs     |    44.4 hours   |
 
 <br>
 
@@ -161,8 +160,25 @@ https://app.diagrams.net/#LHyke
 
 ## Code Showcase
 
-> Use this section to include a brief code snippet of functionality that you are proud of and a brief description.
+```
+eturn (
+    <Container maxWidth="lg" className={classes.blogsContainer}>
+      <h3 className="title">Trails</h3>
+      <Grid container spacing={3}>
+        {trails.map((trail) => (
+          <React.Fragment key={trail.id}>
+
+          <Grid item xs={12} sm={6} md={4}>
+          <Card className={classes.card}>
+            <CardActionArea>
+              <CardMedia id="box"
+                    component={Link} to={`/trails/${trail.id}`}
+                className={classes.media}
+                image={trail.img_url}
+                title={trail.name}
+                />
+```
 
 ## Code Issues & Resolutions
 
-> Use this section to list of all major issues encountered and their resolution.
+The development of React since it was about 3-4 weeks since I have used constantly. 

@@ -59,7 +59,6 @@ function App() {
 
           </Route>
         </Switch>
-      {/* <Layout /> */}
       </Layout>
     </div>
   );
