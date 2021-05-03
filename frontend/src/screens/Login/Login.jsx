@@ -6,7 +6,6 @@ export default function Login(props) {
   const [formData, setFormData] = useState({
     username: "",
     password: "",
-    // confirm: "",
   });
 
   const { username, password } = formData;
@@ -31,39 +30,37 @@ export default function Login(props) {
       <h3 className="login-title"> Login </h3>
 
       <br />
-      
+
       <div className="container">
         <div className="inner-container">
-
-        <label>
-          Username:
-          <input
-            placeholder="Username"
-            type="text"
-            name="username"
-            value={username}
-            onChange={handleChange}
+          <label>
+            Username:
+            <input
+              placeholder="Username"
+              type="text"
+              name="username"
+              value={username}
+              onChange={handleChange}
             />
-        </label>
-<br />
-        <label>
-          Password:
-          <input
-            placeholder="Password"
-            type="password"
-            name="password"
-            value={password}
-            onChange={handleChange}
+          </label>
+          <br />
+          <label>
+            Password:
+            <input
+              placeholder="Password"
+              type="password"
+              name="password"
+              value={password}
+              onChange={handleChange}
             />
-        </label>
-            </div>
+          </label>
+        </div>
         <div className="login-button-container">
           <Link to="/register">Register</Link>
           <div className="login-button">
-
-        <button >Submit</button>
+            <button>Submit</button>
           </div>
-      </div>
+        </div>
       </div>
     </form>
   );
