@@ -7,7 +7,6 @@ export default function TrailCreate(props) {
     location: "",
     duration: "",
     details: "",
-    imgURL: "",
   });
 
   const { name, location, duration, details } = useState(false);
@@ -40,46 +39,44 @@ export default function TrailCreate(props) {
                 name="name"
                 value={name}
                 onChange={handleChange}
-                
               />
             </label>
-          <label>
-            Location
-            <input
-              placeholder="Location of Trail"
-              type="text"
-              name="location"
-              value={location}
-              onChange={handleChange}
-              
+            <label>
+              Location
+              <input
+                placeholder="Location of Trail"
+                type="text"
+                name="location"
+                value={location}
+                onChange={handleChange}
               />
-          </label>
-          <label>
-            Miles (Total)
-            <input
-              type="number"
-              placeholder="Total Miles"
-              name="duration"
-              value={duration}
-              onChange={handleChange}
+            </label>
+            <label>
+              Miles (Total)
+              <input
+                type="number"
+                placeholder="Total Miles"
+                name="duration"
+                value={duration}
+                onChange={handleChange}
               />
-          </label>
-          <label>
-            {" "}
-            Trail Details
-            <input
-              type="text"
-              placeholder="Details (2-4 sentences)"
-              name="details"
-              value={details}
-              onChange={handleChange}
+            </label>
+            <label>
+              {" "}
+              Trail Details
+              <input
+                type="text"
+                placeholder="Details (2-4 sentences)"
+                name="details"
+                value={details}
+                onChange={handleChange}
               />
-          </label>
-          <button type="submit" id="add-button">
-            Add
-          </button>
+            </label>
+            <button type="submit" id="add-button">
+              Add
+            </button>
+          </div>
         </div>
-              </div>
       </form>
     </div>
   );

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import './Register.css'
+import "./Register.css";
 
 export default function Register(props) {
   const [formData, setFormData] = useState({
@@ -7,7 +7,6 @@ export default function Register(props) {
     username: "",
     email: "",
     password: "",
-    // confirm: "",
   });
 
   const { name, username, email, password } = formData;
@@ -15,14 +14,15 @@ export default function Register(props) {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData(prevState => ({
+    setFormData((prevState) => ({
       ...prevState,
       [name]: value,
     }));
   };
 
   return (
-    <form className ="register"
+    <form
+      className="register"
       onSubmit={(e) => {
         e.preventDefault();
         handleRegister(formData);
@@ -31,55 +31,50 @@ export default function Register(props) {
       <h3 className="register-title"> Register </h3>
       <br />
       <div className="register-labels">
-
-      <label>
-        Name:
-        <input
-          placeholder = "Name"
-          type="text"
-          name="name"
-          value={name}
-          onChange={handleChange}
+        <label>
+          Name:
+          <input
+            placeholder="Name"
+            type="text"
+            name="name"
+            value={name}
+            onChange={handleChange}
           />
-      </label>
-      <br/>
-      <label>
-        Username:
-        <input
-          placeholder = "Username"
-          type="text"
-          name="username"
-          value={username}
-          onChange={handleChange}
+        </label>
+        <br />
+        <label>
+          Username:
+          <input
+            placeholder="Username"
+            type="text"
+            name="username"
+            value={username}
+            onChange={handleChange}
           />
-      </label>
-      <br/>
-      <label>
-        Email:
-        <input
-          placeholder= "Email Address"
-          type="text"
-          name="email"
-          value={email}
-          onChange={handleChange}
+        </label>
+        <br />
+        <label>
+          Email:
+          <input
+            placeholder="Email Address"
+            type="text"
+            name="email"
+            value={email}
+            onChange={handleChange}
           />
-      </label>
-      <br/>
-      <label>
-        Password:
-        <input
-          placeholder= "Password"
-          type="password"
-          name="password"
-          value={password}
-          onChange={handleChange}
+        </label>
+        <br />
+        <label>
+          Password:
+          <input
+            placeholder="Password"
+            type="password"
+            name="password"
+            value={password}
+            onChange={handleChange}
           />
-      </label>
-      <br/>
-      {/* <label> Confirm Password:
-        <input type="password" name="confirm password" value={confirm} onChange={handleChange} />
-        
-      </label> */}
+        </label>
+        <br />
       </div>
       <button className="register-button">Submit</button>
     </form>
