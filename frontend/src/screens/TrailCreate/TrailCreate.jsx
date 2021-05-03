@@ -28,9 +28,10 @@ export default function TrailCreate(props) {
           handleCreate(formData);
         }}
       >
-        <div className="form">
+        <div className="create-form">
           <div className="field">
-            <h2 className="title">Add Trail</h2>
+            <h2 className="create-title">Add Trail</h2>
+            <br/>
             <label>
               Trail Name:
               <input
@@ -41,6 +42,7 @@ export default function TrailCreate(props) {
                 onChange={handleChange}
               />
             </label>
+            <br/>
             <label>
               Location
               <input
@@ -51,6 +53,7 @@ export default function TrailCreate(props) {
                 onChange={handleChange}
               />
             </label>
+            <br/>
             <label>
               Miles (Total)
               <input
@@ -61,6 +64,7 @@ export default function TrailCreate(props) {
                 onChange={handleChange}
               />
             </label>
+            <br/>
             <label>
               {" "}
               Trail Details
@@ -72,9 +76,12 @@ export default function TrailCreate(props) {
                 onChange={handleChange}
               />
             </label>
+            <div className="create-button">
+
             <button type="submit" id="add-button">
-              Add
+              Add Trail
             </button>
+            </div>
           </div>
         </div>
       </form>
