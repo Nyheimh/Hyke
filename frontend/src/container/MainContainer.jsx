@@ -31,8 +31,8 @@ export default function MainContainer(props) {
 
   useEffect(() => {
     const fetchTrails = async () => {
-      const foodData = await getAllTrails();
-      setTrails(foodData);
+      const trailData = await getAllTrails();
+      setTrails(trailData);
     };
     fetchTrails();
   }, []);
